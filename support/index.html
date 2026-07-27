@@ -39,16 +39,16 @@
   <details>
     <summary>How do nudges work?</summary>
     <p>Tap + and answer two things: a day, and when in that day. The second answer is a
-    <strong>preset</strong>, morning through night, plus anytime and all day. Remsy draws a real
-    minute inside that preset's window, keeps it inside your online hours, and rounds it to
-    something tidy. Most reminder apps make you translate "this evening" into 19:00 before they
-    will take it. Remsy stores the answer you gave.</p>
-    <p>If you want an exact minute instead, pick <strong>Specific time</strong> and set the date and
-    the time together. That one arrives to the minute and pierces Focus.</p>
-    <p>A preset nudge you have not dealt with tries again in each later part of the same day:
-    something set for the morning speaks again in the afternoon, the evening and at night, then
-    stops. It keeps doing that on the days it is scheduled for until you complete it, move it or
-    delete it. A specific-time nudge does not do this. It arrives once, at its time.</p>
+    <strong>preset</strong>, morning through night, plus anytime. Remsy draws a real minute inside
+    that preset's window and rounds it to something tidy. Most reminder apps make you translate
+    "this evening" into 19:00 before they will take it. Remsy stores the answer you gave.</p>
+    <p>Either half can be exact instead. <strong>Specific date</strong> opens a calendar on the day
+    slot and <strong>Specific time</strong> opens the clock on the time slot, so you can pin one and
+    leave the other as a preset. A nudge set to an exact minute arrives at that minute and pierces
+    Focus.</p>
+    <p>A nudge arrives once, at its time. If you do not deal with it, it waits in your list and
+    stays in the count at the top of the screen until you complete it, move it or delete it. It
+    does not speak again.</p>
   </details>
 
   <details>
@@ -66,7 +66,8 @@
     <summary>What does Someday do?</summary>
     <p>Someday is for things with no date that you still do not want to lose. A nudge shelved there
     speaks once, on a day drawn at random between <strong>15 and 90 days</strong> from when you
-    shelved it, at its own part of the day. It never repeats and never tries again.</p>
+    shelved it, at its own part of the day. From that point it is an ordinary nudge, and it can
+    repeat like any other.</p>
     <p>The day is drawn per nudge, so a handful shelved in one sitting come back spread out rather
     than all on the same afternoon. It stays in your list the whole time, sorted by that date like
     everything else, so you can open it and give it a real day whenever you want. Shelving it again
@@ -76,28 +77,47 @@
   <details>
     <summary>Can a nudge repeat?</summary>
     <p>Yes, with Remsy Plus. Open a nudge and tap Repeat: every day, every week, weekdays,
-    weekends, every month, every year, or every N days with the number you type. Which cadences are
-    offered depends on the day the nudge is set to.</p>
+    weekends, every month, every year, every N days, or every N hours. Which cadences are offered
+    depends on the day the nudge is set to.</p>
+    <p><strong>Every N hours</strong> is the only one that runs round the clock, so it is the one
+    to use for medication. Set the time first and the repeat applies on top of it: a nudge set for
+    9pm and repeated every 4 hours runs 9pm, 1am, 5am, 9am, 1pm, 5pm. Those arrive as time
+    sensitive, so they come through Focus whether or not you gave the nudge a sound.</p>
     <p><strong>Done this one</strong> completes the occurrence in front of you and the arrangement
     carries on. The trash on a repeat skips just that one occurrence. <strong>Finish series</strong>
-    is the one that ends the whole thing.</p>
-    <p>If your Plus subscription lapses, a repeat is not deleted. It stops recurring and sits in
-    your list holding its place, and the first time you complete an occurrence it parks: nothing
-    fires, and the only thing left to do with it is delete it. Subscribe again and it picks up where
-    it left off, with its cadence and its history intact.</p>
+    is the one that ends the whole thing. Opened from the calendar, Done and the trash apply to the
+    day you tapped rather than to one occurrence, which only differs on an hourly repeat.</p>
+    <p>If your Plus subscription lapses, a repeat is not deleted and the card is not changed. It
+    stops recurring, and the first time you complete an occurrence it parks. Everything on the card
+    still works except Done this one, which shows a padlock, and a line under it says the repeat is
+    paused. Subscribe again and it picks up where it left off, with its cadence and its history
+    intact.</p>
+  </details>
+
+  <details>
+    <summary>Can I pause a repeat instead of deleting it?</summary>
+    <p>Yes, on the <strong>Repeats</strong> tab, which lists every repeating nudge in one place.
+    Pause one, or pause all of them, and pick the date it should run again on. "Resumes August 3"
+    means it runs on August 3.</p>
+    <p>A pause does not change the rhythm. Remsy simply clears the occurrences between now and the
+    date you picked, the same way deleting one occurrence at a time does, so the arrangement comes
+    back on its own schedule with nothing to repair. You can resume early at any time, and the days
+    already skipped stay skipped.</p>
+    <p>A repeat that runs several times a day comes back at the first of its times on the resume
+    day, which may be during the night.</p>
   </details>
 
   <details>
     <summary>Can I choose what time each part of the day means?</summary>
-    <p>In Preferences, under "When each part lands", you can give morning, afternoon, evening and
-    night a preferred time each. Nudges in that part land within about ten minutes of it, so several
-    sharing one preference do not all arrive at the same minute. Leave a part on
-    <strong>Surprise me</strong> and Remsy draws a fresh time inside that window instead. The
-    Shuffle button appears only for parts left on Surprise me, because a preferred time is an answer
-    and re-rolling it would throw that answer away.</p>
-    <p>Under "Online hours" you can set the earliest and latest a nudge may land, and split weekdays
-    from weekends if the two differ. Nothing lands outside those hours except a specific time, which
-    is exactly what you asked for and is left alone.</p>
+    <p>In Preferences, under "When each part lands", you set two things per part: the hours it
+    covers, and a preferred time inside them. A nudge in that part lands on that exact minute.
+    Leave a part on <strong>Surprise me</strong> instead and Remsy draws a time inside the part's
+    own hours, snapped to a round minute. The Shuffle button appears only for parts left on Surprise
+    me, because a preferred time is an answer and re-rolling it would throw that answer away.</p>
+    <p>Under "Weekend hours" you can hold weekend nudges to a narrower window than the rest of the
+    week. Which days count as your weekend is the section above it. Week days use the part hours as
+    they are. A specific time is never held to any of this: it is exactly what you asked for and is
+    left alone.</p>
   </details>
 
   <details>
@@ -105,10 +125,10 @@
     <p>Check that notifications are allowed for Remsy in Settings, then Notifications, then
     Remsy. Remsy uses local notifications, so it needs no connection and no account.</p>
     <p>A nudge plays a sound by default. Switch it to Silent when you create it and it arrives
-    quietly in Notification Center with a badge instead. A specific-time nudge comes through Focus;
-    the others do not, so a Focus mode will hold them back.</p>
-    <p>If they arrive but at odd times, check your online hours in Preferences. A narrow window
-    squeezes every preset into it.</p>
+    quietly in Notification Center with a badge instead. A specific-time nudge and an every N hours
+    repeat both come through Focus; the others do not, so a Focus mode will hold them back.</p>
+    <p>If they arrive but at odd times, check "When each part lands" in Preferences. A narrow
+    window squeezes every nudge in that part into it.</p>
     <p>Tapping a notification opens the app on that nudge with its card already open, or on Done if
     you have already completed it.</p>
   </details>
@@ -116,11 +136,10 @@
   <details>
     <summary>What is the free limit?</summary>
     <p>Three active nudges in total, not per day. Someday counts, and so does anything you share in
-    from another app. The two examples Remsy starts you with do not. Completing or deleting one
-    frees a slot.</p>
+    from another app. Completing or deleting one frees a slot.</p>
     <p>At the limit, sharing into Remsy stops too: you get the paywall, and closing it without
-    subscribing means the shared text is not kept. Remsy Plus removes the limit and unlocks
-    repeating nudges and all nineteen palettes.</p>
+    subscribing means the shared text is not kept. Remsy Plus removes the limit, unlocks repeating
+    nudges and the Repeats tab that pauses them, and opens all nineteen palettes.</p>
   </details>
 
   <details>
@@ -168,7 +187,7 @@
   <details>
     <summary>How do I delete all my data?</summary>
     <p>Delete the app. That removes everything Remsy stored on the device, though a backup file you
-    saved earlier stays wherever you put it, and an Remsy Plus subscription still needs cancelling
+    saved earlier stays wherever you put it, and a Remsy Plus subscription still needs cancelling
     separately.</p>
   </details>
 
