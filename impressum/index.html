@@ -2,72 +2,97 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- KEPT OUT OF SEARCH ON PURPOSE, until the app is released. Remove this tag on all
+     five pages to let the site be indexed again.
+     NOTE: a robots.txt in this repo would do NOTHING. Crawlers only read robots.txt at the
+     DOMAIN root (nicoleforestaverde.github.io/robots.txt), which belongs to the user site repo,
+     not to /remsy/. For a project page the per-page meta tag is the mechanism that works.
+     This does NOT make the pages unreachable: anyone with the URL still opens them, which is
+     required - the shipped app links privacy, support and impressum from its paywall and
+     Preferences (src/links.js), and App Review has to be able to fetch them. -->
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Remsy Legal Notice</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { margin: 0; padding: 2rem 1.25rem 4rem; font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
-         background: #F8F7F4; color: #26333A; }
-  main { max-width: 42rem; margin: 0 auto; }
-  h1 { font-size: 1.7rem; font-weight: 600; margin: 0 0 .25rem; }
-  h2 { font-size: 1.15rem; font-weight: 600; margin: 2.2rem 0 .5rem; }
-  .muted { opacity: .65; font-size: .9rem; }
-  nav { margin-top: 3rem; font-size: .9rem; }
-  a { color: #1B5E7D; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #081418; color: #DDE6EA; }
-    a { color: #7FB8D4; }
-  }
-</style>
+<meta name="description" content="Legal notice for Remsy, published by Fenger Digital GmbH, Osnabrück, Germany.">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<main>
-  <h1>Legal Notice / Impressum</h1>
-  <p class="muted">Information according to § 5 DDG (formerly § 5 TMG).</p>
 
-  <h2>Company</h2>
-  <p>
-    Fenger Digital GmbH<br>
-    Wiesenstraße 6<br>
-    49074 Osnabrück<br>
-    Germany
-  </p>
+<header class="band light pagehead">
+  <div class="wrap">
+    <a class="brandrow" href="../" style="margin-bottom:2.2rem;">
+      <img src="../icon.svg" alt="" width="44" height="44" style="width:44px;height:44px;">
+      <span class="n" style="color:#5d6773;font-size:1.6rem;">Remsy</span>
+    </a>
+    <p class="eyebrow">Legal</p>
+    <h1>Legal Notice / Impressum</h1>
+    <div class="squiggle" aria-hidden="true">
+      <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </div>
+    <p class="stamp">Information according to § 5 DDG (formerly § 5 TMG).</p>
+  </div>
+</header>
 
-  <h2>Represented by</h2>
-  <p>Denis Fenger</p>
+<main class="doc">
+  <div class="wrap">
+    <div class="prose">
+      <h2>Company</h2>
+      <p>
+        Fenger Digital GmbH<br>
+        Wiesenstraße 6<br>
+        49074 Osnabrück<br>
+        Germany
+      </p>
 
-  <h2>Contact</h2>
-  <p>
-    Phone: +49 (0) 541 440 252 27<br>
-    Email: <a href="mailto:info@softailed.com">info@softailed.com</a>
-  </p>
+      <h2>Represented by</h2>
+      <p>Denis Fenger</p>
 
-  <h2>Register entry</h2>
-  <p>
-    Registration court: Amtsgericht Osnabrück<br>
-    Register number: HRB 216152
-  </p>
+      <h2>Contact</h2>
+      <p>
+        Phone: +49 (0) 541 440 252 27<br>
+        Email: <a href="mailto:info@softailed.com">info@softailed.com</a>
+      </p>
 
-  <h2>VAT identification number</h2>
-  <p>
-    VAT ID according to § 27a Umsatzsteuergesetz: DE343212970
-  </p>
+      <h2>Register entry</h2>
+      <p>
+        Registration court: Amtsgericht Osnabrück<br>
+        Register number: HRB 216152
+      </p>
 
-  <!-- NO "Responsible for content" block, and this is deliberate rather than an oversight.
-       § 18 Abs. 2 MStV attaches that named-person duty to journalistic or editorial content;
-       these are the legal pages of a reminder app, which is not that. The liable party is the
-       company, already identified above in full: Fenger Digital GmbH, its address, its
-       register entry, its VAT ID and the person representing it. Naming a private individual
-       as additionally responsible adds a personal exposure the company already carries.
-       It was restored here once on a § 18 reading and removed again on the owner's decision.
-       Do not add it back without that decision changing. -->
-  <nav>
-    <a href="../privacy/">Privacy</a> &nbsp;·&nbsp;
-    <a href="../terms/">Terms</a> &nbsp;·&nbsp;
-    <a href="../support/">Support</a> &nbsp;·&nbsp;
-    <a href="../impressum/">Legal Notice</a>
-    <p class="muted">© 2026 Fenger Digital GmbH</p>
-  </nav>
+      <h2>VAT identification number</h2>
+      <p>
+        VAT ID according to § 27a Umsatzsteuergesetz: DE343212970
+      </p>
+
+      <!-- NO "Responsible for content" block, and this is deliberate rather than an oversight.
+           § 18 Abs. 2 MStV attaches that named-person duty to journalistic or editorial content;
+           these are the legal pages of a reminder app, which is not that. The liable party is the
+           company, already identified above in full: Fenger Digital GmbH, its address, its
+           register entry, its VAT ID and the person representing it. Naming a private individual
+           as additionally responsible adds a personal exposure the company already carries.
+           It was restored here once on a § 18 reading and removed again on the owner's decision.
+           Do not add it back without that decision changing. -->
+    </div>
+  </div>
 </main>
+
+<footer>
+  <div class="wrap">
+    <div class="brandrow">
+      <img src="../icon.svg" alt="">
+      <span class="n">Remsy</span>
+    </div>
+    <nav>
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="../terms/">Terms of Service</a>
+      <a href="../support/">Support</a>
+      <a href="../impressum/">Legal Notice</a>
+    </nav>
+    <p class="fine">Questions? <a href="mailto:info@softailed.com">info@softailed.com</a></p>
+    <p class="fine" style="margin-top:.6rem;">&copy; 2026 Fenger Digital GmbH</p>
+  </div>
+</footer>
+
 </body>
 </html>

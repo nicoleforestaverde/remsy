@@ -2,225 +2,264 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- KEPT OUT OF SEARCH ON PURPOSE, until the app is released. Remove this tag on all
+     five pages to let the site be indexed again.
+     NOTE: a robots.txt in this repo would do NOTHING. Crawlers only read robots.txt at the
+     DOMAIN root (nicoleforestaverde.github.io/robots.txt), which belongs to the user site repo,
+     not to /remsy/. For a project page the per-page meta tag is the mechanism that works.
+     This does NOT make the pages unreachable: anyone with the URL still opens them, which is
+     required - the shipped app links privacy, support and impressum from its paywall and
+     Preferences (src/links.js), and App Review has to be able to fetch them. -->
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Remsy Support</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { margin: 0; padding: 2rem 1.25rem 4rem; font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
-         background: #F8F7F4; color: #26333A; }
-  main { max-width: 42rem; margin: 0 auto; }
-  h1 { font-size: 1.7rem; font-weight: 600; margin: 0 0 .25rem; }
-  h2 { font-size: 1.15rem; font-weight: 600; margin: 2.2rem 0 .5rem; }
-  .muted { opacity: .65; font-size: .9rem; }
-  .card { background: rgba(27,94,125,.08); border-radius: 14px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
-  details { margin: .6rem 0; background: rgba(27,94,125,.06); border-radius: 12px; padding: .7rem 1rem; }
-  summary { cursor: pointer; font-weight: 600; }
-  nav { margin-top: 3rem; font-size: .9rem; }
-  a { color: #1B5E7D; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #081418; color: #DDE6EA; }
-    .card, details { background: rgba(221,230,234,.07); }
-    a { color: #7FB8D4; }
-  }
-</style>
+<meta name="description" content="Answers about how Remsy schedules reminders, repeats, Someday, backups and Remsy Plus, plus how to get in touch.">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<main>
-  <h1>Remsy Support</h1>
-  <p class="muted">Reminders for the things you would like to get around to.</p>
 
-  <div class="card">
-    Need help? Email <a href="mailto:info@softailed.com">info@softailed.com</a>.
-    We usually reply within a few days.
+<header class="band light pagehead">
+  <div class="wrap">
+    <a class="brandrow" href="../" style="margin-bottom:2.2rem;">
+      <img src="../icon.svg" alt="" width="44" height="44" style="width:44px;height:44px;">
+      <span class="n" style="color:#5d6773;font-size:1.6rem;">Remsy</span>
+    </a>
+    <p class="eyebrow">Support</p>
+    <h1>Answers and contact</h1>
+    <div class="squiggle" aria-hidden="true">
+      <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </div>
+    <p class="stamp">Reminders for the things you would like to get around to.</p>
   </div>
+</header>
 
-  <h2>Frequently asked questions</h2>
+<main class="doc">
+  <div class="wrap">
+    <div class="contactcard">
+      <p>Need help? Email <a href="mailto:info@softailed.com">info@softailed.com</a>.
+    We usually reply within a few days.</p>
+    </div>
 
-  <details>
-    <summary>How do nudges work?</summary>
-    <p>Tap + and answer two things: a day, and when in that day. The second answer is a
-    <strong>preset</strong>, morning through night, plus anytime. Remsy draws a real minute inside
-    that preset's window and rounds it to something tidy. Most reminder apps make you translate
-    "this evening" into 19:00 before they will take it. Remsy stores the answer you gave.</p>
-    <p>Either half can be exact instead. <strong>Specific date</strong> opens a calendar on the day
-    slot and <strong>Specific time</strong> opens the clock on the time slot, so you can pin one and
-    leave the other as a preset. A nudge set to an exact minute arrives at that minute.</p>
-    <p>A nudge arrives once, at its time. If you do not deal with it, it waits in your list and
-    stays in the count at the top of the screen until you complete it, move it or delete it. It
-    does not speak again.</p>
-  </details>
+    <div class="prose">
+      <h2>Frequently asked questions</h2>
+    </div>
 
-  <details>
-    <summary>What is Later, and what is Some other time?</summary>
-    <p>Two ways to move a nudge, and you use one or the other.</p>
-    <p><strong>Later</strong> is the quick one: it rolls the nudge to the next part of the day and
-    commits straight away. The « and » arrows beside it step the preview further out without
-    changing anything, so you can see where it would land before you take it.</p>
-    <p><strong>Some other time</strong> opens a sentence you fill in: move this to a day, at a
-    preset. Nothing moves until you tap OK. Tapping a day, a preset or Shuffle only changes what
-    the sentence says; close the popup without confirming and the nudge keeps the time it had.</p>
-  </details>
-
-  <details>
-    <summary>What does Someday do?</summary>
-    <p>Someday is for things with no date that you still do not want to lose. A nudge shelved there
-    speaks once, on a day drawn at random between <strong>15 and 90 days</strong> from when you
-    shelved it, at its own part of the day. From that point it is an ordinary nudge, and it can
-    repeat like any other.</p>
-    <p>The day is drawn per nudge, so a handful shelved in one sitting come back spread out rather
-    than all on the same afternoon. It stays in your list the whole time, sorted by that date like
-    everything else, so you can open it and give it a real day whenever you want. Shelving it again
-    draws a new day.</p>
-  </details>
-
-  <details>
-    <summary>Can a nudge repeat?</summary>
-    <p>Yes, with Remsy Plus. Open a nudge and tap Repeat, then either Every day or a number and a
-    unit: every so many hours, days, weeks, months or years. Every week, every month and every year
-    are that control set to one. Which units are offered depends on the day the nudge is set to.</p>
-    <p><strong>Every N hours</strong> is the only one that runs round the clock, so it is the one
-    to use for medication. Set the time first and the repeat applies on top of it: a nudge set for
-    9pm and repeated every 4 hours runs 9pm, 1am, 5am, 9am, 1pm, 5pm. It is also the only repeat
-    that can come through a Focus mode, and that is off until you switch it on: Preferences, then
-    Time Sensitive. With it on, these arrive whether or not you gave the nudge a sound.</p>
-    <p><strong>Done this one</strong> completes the occurrence in front of you and the arrangement
-    carries on. The trash on a repeat skips just that one occurrence. <strong>Finish series</strong>
-    is the one that ends the whole thing. Opened from the calendar, Done and the trash apply to the
-    day you tapped rather than to one occurrence, which only differs on an hourly repeat.</p>
-    <p>If your Plus subscription lapses, nothing is deleted. The repeat stops running and Done this
-    one wears a padlock. On the Today screen you can put the whole arrangement away rather than
-    clear its show-ups one at a time: swipe the card, or use the trash, and it leaves Today. It is
-    still on the Calendar, with its cadence, its history and any days you had skipped. Subscribe
-    again and it picks up where it left off and comes back to Today on its own.</p>
-  </details>
-
-  <details>
-    <summary>What does swiping a card do?</summary>
-    <p>On the Today screen, swipe a card to the left to complete it. There is no distance to reach
-    and nothing to confirm: once the card has moved left, letting go completes it. Drag it back to
-    where it started if you change your mind. A completed nudge goes to Done and can be restored
-    from there, and a repeat completes the show-up in front of you and carries on.</p>
-    <p>On the Done screen the same swipe removes an entry for good, with a few seconds to undo it.</p>
-    <p>A repeat that cannot run because Plus has lapsed is put away instead of completed. See the
-    answer above: nothing is deleted and it stays on the Calendar.</p>
-  </details>
-
-  <details>
-    <summary>Can I pause a repeat instead of deleting it?</summary>
-    <p>Yes. Open the nudge and tap <strong>Pause</strong>, then pick the date it should run again
-    on. "Resumes on August 3" means it runs on August 3.</p>
-    <p>A pause does not change the rhythm. Remsy simply clears the occurrences between now and the
-    date you picked, the same way deleting one occurrence at a time does, so the arrangement comes
-    back on its own schedule with nothing to repair. You can resume early at any time, and the days
-    already skipped stay skipped.</p>
-    <p>A repeat that runs several times a day comes back at the first of its times on the resume
-    day, which may be during the night.</p>
-  </details>
-
-  <details>
-    <summary>Can I choose what time each part of the day means?</summary>
-    <p>In Preferences, under "When each part lands", you set two things per part: the hours it
-    covers, and a preferred time inside them. A nudge in that part lands on that exact minute.
-    Leave a part on <strong>Surprise me</strong> instead and Remsy draws a time inside the part's
-    own hours, snapped to a round minute. The Shuffle button appears only for parts left on Surprise
-    me, because a preferred time is an answer and re-rolling it would throw that answer away.</p>
-    <p>Under "Weekend hours" you can hold weekend nudges to a narrower window than the rest of the
-    week. Which days count as your weekend is the section above it. Week days use the part hours as
-    they are. A specific time is never held to any of this: it is exactly what you asked for and is
-    left alone.</p>
-  </details>
-
-  <details>
-    <summary>I am not receiving notifications.</summary>
-    <p>Check that notifications are allowed for Remsy in Settings, then Notifications, then
-    Remsy. Remsy uses local notifications, so it needs no connection and no account.</p>
-    <p>A nudge plays a sound by default. Switch it to Silent when you create it and it arrives
-    quietly in Notification Center with a badge instead. A Focus mode holds everything back by
-    default. The one exception is an every N hours repeat, and only if you switch on Time
-    Sensitive in Preferences. You can also let Remsy through in Settings, then Focus, then the
-    mode you use.</p>
-    <p>If nothing plays a sound at all, check Settings, then Notifications, then Remsy. If there
-    is no Sounds row there, iOS has Remsy on record as an app that does not use sound. Reinstall
-    the app to clear that, and export a backup from Preferences first, because deleting the app
-    deletes your nudges with it.</p>
-    <p>If they arrive but at odd times, check "When each part lands" in Preferences. A narrow
-    window squeezes every nudge in that part into it.</p>
-    <p>Tapping a notification opens the app on that nudge with its card already open, or on Done if
-    you have already completed it.</p>
-  </details>
-
-  <details>
-    <summary>What is the free limit?</summary>
-    <p>Three active nudges in total, not per day. Someday counts, and so does anything you share in
-    from another app. Completing or deleting one frees a slot.</p>
-    <p>At the limit, sharing into Remsy stops too: you get the paywall, and closing it without
-    subscribing means the shared text is not kept. Remsy Plus removes the limit, unlocks repeating
-    nudges, lets you pause one until a date you pick, and opens all nineteen palettes.</p>
-  </details>
-
-  <details>
-    <summary>Can I send things to Remsy from other apps?</summary>
-    <p>Yes. Share text or a link from any app and pick Remsy, and it is filed to Someday so it does
-    not interrupt anything. A share never asks you a system question mid-share: if Remsy has not
-    been allowed notifications yet it takes iOS's quiet permission instead, and iOS offers Keep or
-    Turn Off on the first one that arrives. Open the nudge afterwards to edit it or give it a real
-    day.</p>
-  </details>
-
-  <details>
-    <summary>How do I move my data to a new device?</summary>
-    <p>In Preferences, under Your data, tap <strong>Back up</strong>. The file holds your nudges,
-    your Done list and your settings.</p>
-    <p>Save it somewhere the new device can reach, such as Files or iCloud Drive, then open
-    Preferences there and tap <strong>Restore</strong>. Remsy cannot be opened straight from a
-    shared file, so it has to be saved first. You will be asked to confirm before a restore replaces
-    anything.</p>
-  </details>
-
-  <details>
-    <summary>How do I cancel my Remsy Plus subscription?</summary>
-    <p>Preferences, then Manage subscription, which opens Apple's subscription screen. You can also
-    get there through Settings, your name, Subscriptions. Deleting the app does not cancel it.</p>
-  </details>
-
-  <details>
-    <summary>I reinstalled or changed device. Where is my subscription?</summary>
-    <p>Open the paywall and tap Restore purchases. Remsy Plus is tied to your App Store account,
-    not to the device or the app data, so signing in with the same account gets it back.</p>
-  </details>
-
-  <details>
-    <summary>Where is my data stored? Can you recover it?</summary>
-    <p>Your nudges live on your device, plus wherever you choose to keep a backup file. Remsy has
-    no account and no server of ours, and your nudges are never sent anywhere. Each time you open
-    Remsy it asks RevenueCat, the service that tracks subscriptions, whether Remsy Plus is active
-    on your store account. That check carries an anonymous ID and your store receipt, and nothing
-    else. If you subscribe, the payment itself goes through Apple. The
-    <a href="../privacy/">Privacy Policy</a> has the details.</p>
-    <p>Because we hold nothing, we cannot recover anything after the app is deleted or the device is
-    reset, unless you saved a backup. A full device backup includes Remsy.</p>
-  </details>
-
-  <details>
-    <summary>How do I delete all my data?</summary>
-    <p>Delete the app. That removes everything Remsy stored on the device, though a backup file you
-    saved earlier stays wherever you put it, and a Remsy Plus subscription still needs cancelling
-    separately.</p>
-  </details>
-
-  <details>
-    <summary>Which languages are available?</summary>
-    <p>English, German, French, Spanish, Portuguese, Korean and Japanese. Remsy follows your device
-    language when it is one of these, and you can also choose one in Preferences.</p>
-  </details>
-
-  <nav>
-    <a href="../privacy/">Privacy</a> &nbsp;·&nbsp;
-    <a href="../terms/">Terms</a> &nbsp;·&nbsp;
-    <a href="../support/">Support</a> &nbsp;·&nbsp;
-    <a href="../impressum/">Legal Notice</a>
-    <p class="muted">© 2026 Fenger Digital GmbH</p>
-  </nav>
+    <div class="faq">
+      <details>
+        <summary>How do nudges work?</summary>
+        <div class="body">
+          <p>Tap + and answer two things: a day, and when in that day. The second answer is a
+          <strong>preset</strong>, morning through night, plus anytime. Remsy draws a real minute inside
+          that preset's window and rounds it to something tidy. Most reminder apps make you translate
+          "this evening" into 19:00 before they will take it. Remsy stores the answer you gave.</p>
+          <p>Either half can be exact instead. <strong>Specific date</strong> opens a calendar on the day
+          slot and <strong>Specific time</strong> opens the clock on the time slot, so you can pin one and
+          leave the other as a preset. A nudge set to an exact minute arrives at that minute.</p>
+          <p>A nudge arrives once, at its time. If you do not deal with it, it waits in your list and
+          stays in the count at the top of the screen until you complete it, move it or delete it. It
+          does not speak again.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What is Later, and what is Some other time?</summary>
+        <div class="body">
+          <p>Two ways to move a nudge, and you use one or the other.</p>
+          <p><strong>Later</strong> is the quick one: it rolls the nudge to the next part of the day and
+          commits straight away. The « and » arrows beside it step the preview further out without
+          changing anything, so you can see where it would land before you take it.</p>
+          <p><strong>Some other time</strong> opens a sentence you fill in: move this to a day, at a
+          preset. Nothing moves until you tap OK. Tapping a day, a preset or Shuffle only changes what
+          the sentence says; close the popup without confirming and the nudge keeps the time it had.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What does Someday do?</summary>
+        <div class="body">
+          <p>Someday is for things with no date that you still do not want to lose. A nudge shelved there
+          speaks once, on a day drawn at random between <strong>15 and 90 days</strong> from when you
+          shelved it, at its own part of the day. From that point it is an ordinary nudge, and it can
+          repeat like any other.</p>
+          <p>The day is drawn per nudge, so a handful shelved in one sitting come back spread out rather
+          than all on the same afternoon. It stays in your list the whole time, sorted by that date like
+          everything else, so you can open it and give it a real day whenever you want. Shelving it again
+          draws a new day.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can a nudge repeat?</summary>
+        <div class="body">
+          <p>Yes, with Remsy Plus. Open a nudge and tap Repeat, then either Every day or a number and a
+          unit: every so many hours, days, weeks, months or years. Every week, every month and every year
+          are that control set to one. Which units are offered depends on the day the nudge is set to.</p>
+          <p><strong>Every N hours</strong> is the only one that runs round the clock, so it is the one
+          to use for medication. Set the time first and the repeat applies on top of it: a nudge set for
+          9pm and repeated every 4 hours runs 9pm, 1am, 5am, 9am, 1pm, 5pm. If you want it to arrive during a
+          Focus mode, switch on "Come through Focus" when you create it. That sits under the Sound choice and
+          has nothing to do with the repeat: any reminder can use it, and an hourly one does not unless
+          you say so.</p>
+          <p><strong>Done this one</strong> completes the occurrence in front of you and the arrangement
+          carries on. The trash on a repeat skips just that one occurrence. <strong>Finish series</strong>
+          is the one that ends the whole thing. Opened from the calendar, Done and the trash apply to the
+          day you tapped rather than to one occurrence, which only differs on an hourly repeat.</p>
+          <p>If your Plus subscription lapses, nothing is deleted. The repeat stops running and Done this
+          one wears a padlock. On the Today screen you can put the whole arrangement away rather than
+          clear its show-ups one at a time: swipe the card, or use the trash, and it leaves Today. It is
+          still on the Calendar, with its cadence, its history and any days you had skipped. Subscribe
+          again and it picks up where it left off and comes back to Today on its own.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What does swiping a card do?</summary>
+        <div class="body">
+          <p>On the Today screen, swipe a card to the left to complete it. There is no distance to reach
+          and nothing to confirm: once the card has moved left, letting go completes it. Drag it back to
+          where it started if you change your mind. A completed nudge goes to Done and can be restored
+          from there, and a repeat completes the show-up in front of you and carries on.</p>
+          <p>On the Done screen the same swipe removes an entry for good, with a few seconds to undo it.</p>
+          <p>A repeat that cannot run because Plus has lapsed is put away instead of completed. See the
+          answer above: nothing is deleted and it stays on the Calendar.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I pause a repeat instead of deleting it?</summary>
+        <div class="body">
+          <p>Yes. Open the nudge and tap <strong>Pause</strong>, then pick the date it should run again
+          on. "Resumes on August 3" means it runs on August 3.</p>
+          <p>A pause does not change the rhythm. Remsy simply clears the occurrences between now and the
+          date you picked, the same way deleting one occurrence at a time does, so the arrangement comes
+          back on its own schedule with nothing to repair. You can resume early at any time, and the days
+          already skipped stay skipped.</p>
+          <p>A repeat that runs several times a day comes back at the first of its times on the resume
+          day, which may be during the night.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I choose what time each part of the day means?</summary>
+        <div class="body">
+          <p>In Preferences, under "When each part lands", you set two things per part: the hours it
+          covers, and a preferred time inside them. A nudge in that part lands on that exact minute.
+          Leave a part on <strong>Surprise me</strong> instead and Remsy draws a time inside the part's
+          own hours, snapped to a round minute. The Shuffle button appears only for parts left on Surprise
+          me, because a preferred time is an answer and re-rolling it would throw that answer away.</p>
+          <p>Under "Weekend hours" you can hold weekend nudges to a narrower window than the rest of the
+          week. Which days count as your weekend is the section above it. Week days use the part hours as
+          they are. A specific time is never held to any of this: it is exactly what you asked for and is
+          left alone.</p>
+        </div>
+      </details>
+      <details>
+        <summary>I am not receiving notifications.</summary>
+        <div class="body">
+          <p>Check that notifications are allowed for Remsy in Settings, then Notifications, then
+          Remsy. Remsy uses local notifications, so it needs no connection and no account.</p>
+          <p>A nudge plays a sound by default. Switch it to Silent when you create it and it arrives
+          quietly in Notification Center with a badge instead. A Focus mode holds everything back, unless you
+          switched on "Come through Focus" for that nudge, which sits under the Sound choice. You can also let Remsy
+          through in Settings, then Focus, then the mode you use.</p>
+          <p>If nothing plays a sound at all, check Settings, then Notifications, then Remsy. If there
+          is no Sounds row there, iOS has Remsy on record as an app that does not use sound. Reinstall
+          the app to clear that, and export a backup from Preferences first, because deleting the app
+          deletes your nudges with it.</p>
+          <p>If they arrive but at odd times, check "When each part lands" in Preferences. A narrow
+          window squeezes every nudge in that part into it.</p>
+          <p>Tapping a notification opens the app on that nudge with its card already open, or on Done if
+          you have already completed it.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What is the free limit?</summary>
+        <div class="body">
+          <p>Three active nudges in total, not per day. Someday counts, and so does anything you share in
+          from another app. Completing or deleting one frees a slot.</p>
+          <p>At the limit, sharing into Remsy stops too: you get the paywall, and closing it without
+          subscribing means the shared text is not kept. Remsy Plus removes the limit, unlocks repeating
+          nudges, lets you pause one until a date you pick, and opens all nineteen palettes.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I send things to Remsy from other apps?</summary>
+        <div class="body">
+          <p>Yes. Share text or a link from any app and pick Remsy, and it is filed to Someday so it does
+          not interrupt anything. A share never asks you a system question mid-share: if Remsy has not
+          been allowed notifications yet it takes iOS's quiet permission instead, and iOS offers Keep or
+          Turn Off on the first one that arrives. Open the nudge afterwards to edit it or give it a real
+          day.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How do I move my data to a new device?</summary>
+        <div class="body">
+          <p>In Preferences, under Your data, tap <strong>Back up</strong>. The file holds your nudges,
+          your Done list and your settings.</p>
+          <p>Save it somewhere the new device can reach, such as Files or iCloud Drive, then open
+          Preferences there and tap <strong>Restore</strong>. Remsy cannot be opened straight from a
+          shared file, so it has to be saved first. You will be asked to confirm before a restore replaces
+          anything.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How do I cancel my Remsy Plus subscription?</summary>
+        <div class="body">
+          <p>Preferences, then Manage subscription, which opens Apple's subscription screen. You can also
+          get there through Settings, your name, Subscriptions. Deleting the app does not cancel it.</p>
+        </div>
+      </details>
+      <details>
+        <summary>I reinstalled or changed device. Where is my subscription?</summary>
+        <div class="body">
+          <p>Open the paywall and tap Restore purchases. Remsy Plus is tied to your App Store account,
+          not to the device or the app data, so signing in with the same account gets it back.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Where is my data stored? Can you recover it?</summary>
+        <div class="body">
+          <p>Your nudges live on your device, plus wherever you choose to keep a backup file. Remsy has
+          no account and no server of ours, and your nudges are never sent anywhere. Each time you open
+          Remsy it asks RevenueCat, the service that tracks subscriptions, whether Remsy Plus is active
+          on your store account. That check carries an anonymous ID and your store receipt, and nothing
+          else. If you subscribe, the payment itself goes through Apple. The
+          <a href="../privacy/">Privacy Policy</a> has the details.</p>
+          <p>Because we hold nothing, we cannot recover anything after the app is deleted or the device is
+          reset, unless you saved a backup. A full device backup includes Remsy.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How do I delete all my data?</summary>
+        <div class="body">
+          <p>Delete the app. That removes everything Remsy stored on the device, though a backup file you
+          saved earlier stays wherever you put it, and a Remsy Plus subscription still needs cancelling
+          separately.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Which languages are available?</summary>
+        <div class="body">
+          <p>English, German, French, Spanish, Portuguese, Korean and Japanese. Remsy follows your device
+          language when it is one of these, and you can also choose one in Preferences.</p>
+        </div>
+      </details>
+    </div>
+  </div>
 </main>
+
+<footer>
+  <div class="wrap">
+    <div class="brandrow">
+      <img src="../icon.svg" alt="">
+      <span class="n">Remsy</span>
+    </div>
+    <nav>
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="../terms/">Terms of Service</a>
+      <a href="../support/">Support</a>
+      <a href="../impressum/">Legal Notice</a>
+    </nav>
+    <p class="fine">Questions? <a href="mailto:info@softailed.com">info@softailed.com</a></p>
+    <p class="fine" style="margin-top:.6rem;">&copy; 2026 Fenger Digital GmbH</p>
+  </div>
+</footer>
+
 </body>
 </html>
