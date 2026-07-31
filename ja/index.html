@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- KEPT OUT OF SEARCH ON PURPOSE, until the app is released. Remove this tag on all
+     five pages to let the site be indexed again.
+     NOTE: a robots.txt in this repo would do NOTHING. Crawlers only read robots.txt at the
+     DOMAIN root (nicoleforestaverde.github.io/robots.txt), which belongs to the user site repo,
+     not to /remsy/. For a project page the per-page meta tag is the mechanism that works.
+     This does NOT make the pages unreachable: anyone with the URL still opens them, which is
+     required - the shipped app links privacy, support and impressum from its paywall and
+     Preferences (src/links.js), and App Review has to be able to fetch them. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remsy: ロック画面リマインダー</title>
+<meta name="description" content="Remsyはリマインダーアプリです。時間帯や正確な時刻を設定すると、無音またはサウンドありでロック画面に通知が届きます。">
+<meta property="og:title" content="Remsy: ロック画面リマインダー">
+<meta property="og:description" content="ロック画面に届くリマインダー、無音でもサウンドありでも。時間帯を設定すればRemsyが分数を決め、自分で指定することもできます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nicoleforestaverde.github.io/remsy/ja/">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ══ 01 HERO ══════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap split">
+    <div>
+      <div class="brandrow" style="margin-bottom:2.6rem;">
+        <img src="../icon.svg" alt="" width="60" height="60" style="width:60px;height:60px;">
+        <div class="n" style="color:#5d6773;font-size:2rem;">Remsy</div>
+      </div>
+
+      <h1>ロック画面に届くリマインダー、<br>無音でもサウンドありでも。</h1>
+
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+
+      <p class="lead wide">日付と時間帯を設定すると、Remsyが分数を決めます。正確な時刻を自分で指定することもできます。リマインドは無音かサウンドありかを選べて、どちらでもロック画面に表示されます。見逃してもリストに残って待っていて、赤く表示されることはありません。</p>
+
+      <div class="cta">
+        <!-- Swap this for Apple's official "Download on the App Store" badge once the
+             app is live. Apple requires their own artwork, so do not redraw the badge. -->
+        <span class="btn primary">App Storeに近日登場</span>
+        <a class="btn quiet" href="#how">仕組みを見る</a>
+      </div>
+      <p class="note">iPhone対応。アカウント登録は不要です。3件までなら無料でご利用いただけます。</p>
+    </div>
+
+    <div>
+      <div class="phone">
+        <div class="screen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">現在2件</span></div>
+          <div class="sect">次の予定</div>
+          <div class="ncard big">
+            <div class="t">屋根の修理業者に折り返し電話する</div>
+            <div class="m"><span class="c on">今日</span><span class="c">夕方</span><span class="c">19:00</span></div>
+          </div>
+          <div class="sect">今後</div>
+          <div class="ncard"><div class="t">味噌のレシピを試す</div><div class="m"><span class="c on">土曜日</span><span class="c">朝</span></div></div>
+          <div class="ncard"><div class="t">抗生物質を1錠、水で服用する</div><div class="m"><span class="c on">4時間ごと</span><span class="c">次回 18:00</span></div></div>
+          <div class="ncard"><div class="t">冬用タイヤを予約する</div><div class="m"><span class="c on">1か月後</span><span class="c">いつでも</span></div></div>
+          <div class="sect">過ぎた分</div>
+          <div class="ncard"><div class="t">イチジクの木に水をやる</div><div class="m"><span class="c on">昨日</span><span class="c">夕方</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 PARTS OF THE DAY ══════════════════════════════════════════════════ -->
+<section class="band light flip" id="how">
+  <div class="wrap">
+    <p class="eyebrow">時間帯で考える</p>
+    <h2>ほかの多くのアプリは<br>分単位で入力させます。</h2>
+    <p class="lead wide">ほかのリマインダーアプリでは、「今日の夕方」も19:00に変換しないと登録できません。Remsyはあなたが答えた通りの言葉を保存したうえで、その時間帯の中から分数を選び、きりのいい数字に丸めます。</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;gap:1.4rem;align-items:stretch;">
+      <div style="width:6px;border-radius:4px;background:#ccd5dd;flex:none;"></div>
+      <div style="font-size:clamp(1.15rem,3vw,1.7rem);line-height:1.4;font-weight:400;">
+        <b style="font-weight:800;border-bottom:3px solid currentColor;">今日</b>の<b style="font-weight:800;border-bottom:3px solid currentColor;">夕方</b>にリマインドを設定
+      </div>
+    </div>
+
+    <div class="strip">
+      <div style="position:relative;">
+        <div class="rail">
+          <div class="w morning">朝<span>7時から12時</span></div>
+          <div class="w afternoon">午後<span>12時から18時</span></div>
+          <div class="w evening">夕方<span>18時から21時</span></div>
+          <div class="w night">夜<span>21時から24時</span></div>
+        </div>
+        <div class="marker" id="mark" style="left:71.8%;"><b id="markLabel">19:00</b></div>
+      </div>
+      <div class="striprow">
+        <button class="btn quiet" id="draw" type="button">もう一度引く</button>
+        <p class="note" style="margin:0;">各時間帯の範囲は設定でいつでも変更でき、希望の時刻を指定すればその時間帯は一分単位で固定されます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 EXACT ═════════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap split rev">
+    <div>
+      <div class="panel" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+        <span class="pill dashed">おまかせ</span>
+        <span class="pill solid">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f151b" stroke-width="1.8"/><path d="M12 7v5.2l3.4 2" stroke="#0f151b" stroke-width="1.8" stroke-linecap="round"/></svg>
+          07:15
+        </span>
+        <p class="lead" style="margin:.6rem 0 0;font-size:1rem;">同じ質問に対する、二つの答え方です。どちらも次善策ではありません。</p>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">分まで指定するなら</p>
+      <h2>精度は<br>幅で選べる。</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">日付だけを決めて他は指定しない、時間帯ごとに希望の時刻を設定する、週末だけ範囲を狭める、あるいは正確な分まで指定する。7:15に設定したリマインドは7:15に届き、四捨五入されることはありません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 REPEAT ════════════════════════════════════════════════════════════ -->
+<section class="band dark flip">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">繰り返し</p>
+      <h2>30分ごと。<br>4時間ごと。<br>毎年。</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">数字と単位で指定します。分、時間、週、月、年のいずれかです。分単位と時間単位は24時間いつでも実行されるので、服薬スケジュールなどに向いています。見逃した回はそのまま表示され続け、対応するまで次には進みません。どのリマインドも集中モード中に知らせるよう設定でき、指定しない限りそうはなりません。繰り返しは好きな日付まで一時停止でき、その後は何もしなくても自動的に再開します。</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem;">
+        <span class="pill ghost">30分ごと</span>
+        <span class="pill solid">4時間ごと</span>
+        <span class="pill ghost">毎年</span>
+      </div>
+    </div>
+    <div>
+      <div class="phone tilt">
+        <div class="screen" style="--p-bg:#080D12;--p-card:#111820;--p-bd:#1C2530;--p-ink:#D4D8E0;--p-sub:#708497;--p-tint:rgba(136,152,168,.12);--p-acc:#8898A8;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">現在1件</span></div>
+          <div class="sect">次の予定</div>
+          <div class="ncard big ring">
+            <div class="t">抗生物質を1錠、水で服用する</div>
+            <div class="m"><span class="c on">4時間ごと</span><span class="c">初回 09:00</span><span class="c">次回 17:00</span></div>
+          </div>
+          <div class="sect">今後</div>
+          <div class="ncard"><div class="t">植物に水をやる</div><div class="m"><span class="c on">3日ごと</span><span class="c">朝</span></div></div>
+          <div class="ncard"><div class="t">母の誕生日</div><div class="m"><span class="c on">毎年</span><span class="c">3月14日</span></div></div>
+          <div class="ncard"><div class="t">家賃の支払い日</div><div class="m"><span class="c on">毎月</span><span class="c">8月3日まで一時停止</span></div></div>
+          <div class="ncard done"><div class="t">浄水フィルターを交換する</div><div class="m"><span class="c">今日完了</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 LATER / WAITING ═══════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">先送りする</p>
+    <h2>あとで。もっとあとで。<br>さらにあとで。</h2>
+    <p class="lead wide">ワンタップでリマインドを次の時間帯に移動でき、実行前にどこに移動するか教えてくれます。カードを左にスワイプすると完了になります。見逃してもリストに残り、画面上部のカウントに数えられたまま、対応するまで待っています。</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;align-items:stretch;gap:.9rem;">
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&laquo;</div>
+      <div style="flex:1;border-radius:16px;background:#f6f7f9;padding:1.1rem 1.4rem;">
+        <div style="font-weight:800;font-size:1.35rem;letter-spacing:-.02em;">あとで</div>
+        <div style="color:var(--l-body);font-size:.98rem;">明日、22:00に届きます</div>
+      </div>
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&raquo;</div>
+    </div>
+
+    <div class="cards">
+      <div class="panel"><h3>一度だけ届く</h3><p>指定した時刻に一度届いたら、それで終わりです。二度目の通知も、エスカレーションも、隅で膨らむ赤いバッジもありません。</p></div>
+      <div class="panel"><h3>いつか</h3><p>日付は決まっていないけれど、忘れたくないこと。Remsyが15日から90日先までの間でランダムに日付を選びます。まとめて「いつか」に入れても、日付が分散するので一度に戻ってくることはありません。</p></div>
+      <div class="panel"><h3>何でも共有できる</h3><p>レシピでも、記事でも、リンクでも。どのアプリからでもRemsyに共有すれば、何も聞かれることなく「いつか」に保存されます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 PALETTES ══════════════════════════════════════════════════════════ -->
+<section class="band light flip">
+  <div class="wrap split rev">
+    <div>
+      <p class="eyebrow">自分好みに</p>
+      <h2>19種類のパレット、<br>ライトとダーク。</h2>
+      <p class="lead wide">同じアプリでも、好きな色を選べます。どのパレットも目分量ではなく計測して作られているので、どれを選んでも文字の視認性は保たれます。タップして試してみましょう。</p>
+
+      <div class="swatches" id="swatches"></div>
+      <p class="swname" id="swname">ポーセリン <span>・ライト・無料</span></p>
+    </div>
+    <div>
+      <div class="phone">
+        <div class="screen" id="pscreen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">現在2件</span></div>
+          <div class="sect">次の予定</div>
+          <div class="ncard big">
+            <div class="t">屋根の修理業者に折り返し電話する</div>
+            <div class="m"><span class="c on">今日</span><span class="c">夕方</span><span class="c">19:00</span></div>
+          </div>
+          <div class="sect">今後</div>
+          <div class="ncard"><div class="t">味噌のレシピを試す</div><div class="m"><span class="c on">土曜日</span><span class="c">朝</span></div></div>
+          <div class="ncard"><div class="t">冬用タイヤを予約する</div><div class="m"><span class="c on">1か月後</span><span class="c">いつでも</span></div></div>
+          <div class="ncard"><div class="t">保証について問い合わせる</div><div class="m"><span class="c on">いつか</span></div></div>
+          <div class="ncard done"><div class="t">検針結果を送る</div><div class="m"><span class="c">今日完了</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 PRIVACY ═══════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap">
+    <p class="eyebrow">プライバシーを守る</p>
+    <h2>アカウント登録は不要。<br>自社サーバーもありません。</h2>
+    <p class="lead wide">リマインドはお使いの端末内に保存され、外部に送信されることはありません。登録も、アナリティクスも、トラッキングもありません。アプリを起動するたびにRevenueCatへ、ストアアカウントでRemsy Plusが有効かどうかを確認しますが、その際に送信されるのは匿名IDとストアのレシートのみです。</p>
+
+    <div class="cards">
+      <div class="panel"><h3>バックアップ</h3><p>1つのファイルにリマインド、完了リスト、設定がまとめて保存され、好きな場所に保管できます。</p></div>
+      <div class="panel"><h3>復元</h3><p>そのファイルから、同じ端末でも新しい端末でも、確認のうえ復元できます。</p></div>
+      <div class="panel"><h3>7つの言語</h3><p>英語、ドイツ語、フランス語、スペイン語、ポルトガル語、韓国語、日本語。</p></div>
+      <div class="panel"><h3>端末内での通知</h3><p>通知は端末上でスケジュールされます。プッシュ通知サービスもデバイストークンも使わず、どこにも送信されません。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 08 PLANS ═════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">Remsy Plus</p>
+    <h2>3件のリマインドは無料。<br>それ以外はPlusで。</h2>
+
+    <div class="plans">
+      <div class="panel plan">
+        <h3>無料</h3>
+        <div class="price">3 <small>件まで同時に</small></div>
+        <ul>
+          <li>日付、時間帯、正確な時刻</li>
+          <li>「いつか」の棚と共有機能</li>
+          <li>標準パレット2種（ライト・ダーク）</li>
+          <li>バックアップと復元</li>
+        </ul>
+      </div>
+      <div class="panel plan">
+        <h3>Plus</h3>
+        <div class="price">$1.99 <small>／月、または $9.99／年</small></div>
+        <ul>
+          <li>リマインド数無制限</li>
+          <li>繰り返し：毎日、または分、時間、週、月、年ごと</li>
+          <li>繰り返しを好きな日付まで一時停止</li>
+          <li>全19種類のパレット</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">自動更新のサブスクリプションです。お支払いはApple Accountに請求され、期間終了の24時間前までに解約しない限り自動的に更新されます。管理や解約はApple Accountの設定から行えます。</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="brandrow">
+      <img src="../icon.svg" alt="">
+      <span class="n">Remsy</span>
+    </div>
+    <nav>
+      <a href="./privacy/">プライバシーポリシー</a>
+      <a href="./terms/">利用規約</a>
+      <a href="./support/">サポート</a>
+      <a href="./impressum/">運営者情報</a>
+    </nav>
+    <p class="fine">お問い合わせ：<a href="mailto:info@softailed.com">info@softailed.com</a></p>
+    <p class="fine" style="margin-top:.6rem;">&copy; 2026 Fenger Digital GmbH</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── The evening draw ──────────────────────────────────────────────────────
+     Honest to the app's clean-time ladder: it takes the roundest step the
+     window can still offer, and a three-hour evening window can offer whole
+     hours, so those are the only landings a drawn evening produces. */
+  var RAIL_START = 7, RAIL_END = 24;
+  var EVENING = [18, 19, 20];
+  var mark = document.getElementById('mark');
+  var markLabel = document.getElementById('markLabel');
+  var drawBtn = document.getElementById('draw');
+  var last = 19;
+
+  function place(hour) {
+    var pct = ((hour - RAIL_START) / (RAIL_END - RAIL_START)) * 100;
+    mark.style.left = pct.toFixed(2) + '%';
+    markLabel.textContent = (hour < 10 ? '0' : '') + hour + ':00';
+  }
+  if (drawBtn) {
+    drawBtn.addEventListener('click', function () {
+      var next = last;
+      while (next === last) next = EVENING[Math.floor(Math.random() * EVENING.length)];
+      last = next;
+      place(next);
+    });
+  }
+
+  /* ── Palettes ──────────────────────────────────────────────────────────────
+     Values copied from src/palettes.js. `tri` is the icon trio from ICON_TRI,
+     used for the swatch face. Keep this table in step with the app; nothing in
+     the build checks it. */
+  var PALETTES = [
+    ['palesky',   'ミッドナイト',    1, 0, '#080D12', '#111820', '#1C2530', '#D4D8E0', '#708497', '#8898A8', ['#D6E6F1','#AACADD','#718494']],
+    ['ashteal',   'シーフォグ',      1, 1, '#0C0E0E', '#141818', '#232828', '#D4D8D8', '#6F8686', '#849EA0', ['#D3E9E9','#A5CFCE','#6C8A8C']],
+    ['plum',      'ナイトシェード',  1, 1, '#181014', '#20141B', '#34232C', '#D0C8CC', '#907D87', '#825B70', ['#E2CFD6','#7D5869','#4D303A']],
+    ['velvet',    'ベルベット',      1, 1, '#0E0C10', '#151017', '#231726', '#DCD8E0', '#8D7791', '#A793AC', ['#F2E9FA','#E1CBF2','#9E85A3']],
+    ['asholive',  'ライケン',        1, 1, '#0E0E0C', '#181814', '#23261D', '#D4D4CC', '#828372', '#96A07A', ['#E4E6D5','#CDD59D','#879166']],
+    ['orchid',    'ウィステリア',    1, 1, '#140914', '#1E0F1E', '#301630', '#D8CEDA', '#8E798C', '#B084AE', ['#ECDDED','#EB9EFF','#B255AD']],
+    ['coolblue',  'ハーバーナイト',  1, 1, '#0A1419', '#101F29', '#192F3D', '#D0D6DC', '#6E8EA5', '#4E86A8', ['#CFE2EC','#61AFCE','#3A6B88']],
+    ['ashpink',   'ブラッシュヘイズ',1, 1, '#0E0C0E', '#171317', '#241C24', '#D8D4D8', '#8B7B8B', '#A880A0', ['#EADCE9','#CEA8D2','#8C6785']],
+    ['ashjade',   'ジェイドヘイズ',  1, 1, '#0C0E0C', '#121612', '#222622', '#D4D8D4', '#6B8675', '#84A08E', ['#DAE9DB','#AFD6B5','#71917B']],
+    ['ashorchid', 'オーキッドヘイズ',1, 1, '#0E0C10', '#18151A', '#27222B', '#D8D4D8', '#897C8F', '#9880A8', ['#E5DEEE','#C1AEE4','#836B94']],
+    ['porcelain', 'ポーセリン',      0, 0, '#F2F2F4', '#FFFFFF', '#DFDFE4', '#0E0E10', '#626267', '#98989E', ['#E4E4E9','#98989E','#505057']],
+    ['peony',     'ピオニー',        0, 1, '#F5DEF4', '#FCF3FC', '#F3D4F1', '#130913', '#744472', '#D796D2', ['#F3D2F0','#D796D2','#854A82']],
+    ['drift',     'ソフトスカイ',    0, 1, '#D2E5F0', '#EBF4FA', '#BAD9EC', '#061016', '#4F5B64', '#79B6D8', ['#C9E0ED','#79B6D8','#436477']],
+    ['chartreuse','シトラス',        0, 1, '#E6EFB5', '#F4F7E1', '#C9D0A3', '#0D1006', '#3F4430', '#BCCF73', ['#DFE6B5','#BCCF73','#67723D']],
+    ['petal',     'ローズウォーター',0, 1, '#EBD8DC', '#FAF0F2', '#EACDD4', '#160B0E', '#605357', '#E8709A', ['#F3C6D6','#E8709A','#803E55']],
+    ['butter',    'カモミール',      0, 1, '#F8EDC1', '#FEFCEF', '#E2DEC1', '#100F05', '#4B4330', '#DFD180', ['#EEE9C5','#DFD180','#7B7246']],
+    ['jade',      '抹茶',            0, 1, '#B4D4BD', '#DBEEE0', '#B0C4B5', '#07110A', '#3C443D', '#7DA88A', ['#C9D9CE','#7DA88A','#455D4C']],
+    ['lilac',     'ライラック',      0, 1, '#E8DFF5', '#F4F2FD', '#CAC1DB', '#150E20', '#644E8E', '#A88BE8', ['#F1EAFB','#C7AFF2','#8F63DC']],
+    ['sage',      'メドウ',          0, 1, '#D4DDA7', '#EDF2D1', '#C1C7A1', '#0E0F06', '#3E3F35', '#889159', ['#CCCFB8','#889159','#4A5030']]
+  ];
+
+  var host = document.getElementById('swatches');
+  var screen = document.getElementById('pscreen');
+  var nameEl = document.getElementById('swname');
+  if (!host || !screen) return;
+
+  function hexToRgba(hex, a) {
+    var n = parseInt(hex.slice(1), 16);
+    return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+
+  function apply(p) {
+    var dark = p[2], bg = p[4], card = p[5], bd = p[6], ink = p[7], sub = p[8], acc = p[9];
+    screen.style.setProperty('--p-bg', bg);
+    screen.style.setProperty('--p-card', card);
+    screen.style.setProperty('--p-bd', bd);
+    screen.style.setProperty('--p-ink', ink);
+    screen.style.setProperty('--p-sub', sub);
+    screen.style.setProperty('--p-acc', acc);
+    screen.style.setProperty('--p-tint', hexToRgba(ink, dark ? 0.10 : 0.055));
+    nameEl.innerHTML = p[1] + ' <span>・' + (dark ? 'ダーク' : 'ライト') + '・' + (p[3] ? 'Plus' : '無料') + '</span>';
+    /* .sw lives inside a group wrapper now, so query rather than walk children. */
+    Array.prototype.forEach.call(host.querySelectorAll('.sw'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.key === p[0]));
+    });
+  }
+
+  /* Two groups in the app's own order: 10 dark, then 9 light. */
+  [['ダーク', 1], ['ライト', 0]].forEach(function (g) {
+    var group = document.createElement('div');
+    group.className = 'swgroup';
+    var label = document.createElement('p');
+    label.className = 'swlabel';
+    label.textContent = g[0];
+    var row = document.createElement('div');
+    row.className = 'swrow';
+    PALETTES.filter(function (p) { return p[2] === g[1]; }).forEach(function (p) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'sw';
+      b.dataset.key = p[0];
+      b.style.background = p[4];
+      b.setAttribute('aria-pressed', 'false');
+      b.setAttribute('aria-label', p[1] + '（' + (p[2] ? 'ダーク' : 'ライト') + 'パレット）');
+      b.innerHTML = '<i style="background:' + p[5] + '"></i><u style="background:' + p[10][1] + '"></u>';
+      b.addEventListener('click', function () { apply(p); });
+      row.appendChild(b);
+    });
+    group.appendChild(label);
+    group.appendChild(row);
+    host.appendChild(group);
+  });
+
+  apply(PALETTES[10]); // Porcelain, the light default
+})();
+</script>
+</body>
+</html>

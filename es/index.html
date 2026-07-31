@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<!-- KEPT OUT OF SEARCH ON PURPOSE, until the app is released. Remove this tag on all
+     five pages to let the site be indexed again.
+     NOTE: a robots.txt in this repo would do NOTHING. Crawlers only read robots.txt at the
+     DOMAIN root (nicoleforestaverde.github.io/robots.txt), which belongs to the user site repo,
+     not to /remsy/. For a project page the per-page meta tag is the mechanism that works.
+     This does NOT make the pages unreachable: anyone with the URL still opens them, which is
+     required - the shipped app links privacy, support and impressum from its paywall and
+     Preferences (src/links.js), and App Review has to be able to fetch them. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remsy: Recordatorios en la pantalla de bloqueo</title>
+<meta name="description" content="Remsy es una app de recordatorios. Elige un momento del día o una hora exacta, y recibe una notificación en la pantalla de bloqueo, en silencio o con sonido.">
+<meta property="og:title" content="Remsy: Recordatorios en la pantalla de bloqueo">
+<meta property="og:description" content="Recordatorios en la pantalla de bloqueo, en silencio o con sonido. Elige un momento del día y Remsy encuentra el minuto, o indica tú la hora.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nicoleforestaverde.github.io/remsy/es/">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ══ 01 HERO ══════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap split">
+    <div>
+      <div class="brandrow" style="margin-bottom:2.6rem;">
+        <img src="../icon.svg" alt="" width="60" height="60" style="width:60px;height:60px;">
+        <div class="n" style="color:#5d6773;font-size:2rem;">Remsy</div>
+      </div>
+
+      <h1>Recordatorios en la pantalla de bloqueo,<br>en silencio o con sonido.</h1>
+
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+
+      <p class="lead wide">Elige un día y un momento del día, y Remsy encuentra el minuto. O indica tú la hora exacta. Cada recordatorio es silencioso o con sonido, tú decides, y en ambos casos aparece en tu pantalla de bloqueo. Si se te pasa uno, se queda esperando en la lista. Nada se pone en rojo.</p>
+
+      <div class="cta">
+        <!-- Swap this for Apple's official "Download on the App Store" badge once the
+             app is live. Apple requires their own artwork, so do not redraw the badge. -->
+        <span class="btn primary">Próximamente en la App Store</span>
+        <a class="btn quiet" href="#how">Ver cómo funciona</a>
+      </div>
+      <p class="note">iPhone. Sin cuenta, sin registro. Gratis hasta tres recordatorios.</p>
+    </div>
+
+    <div>
+      <div class="phone">
+        <div class="screen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">2 ahora</span></div>
+          <div class="sect">SIGUIENTE</div>
+          <div class="ncard big">
+            <div class="t">Llamar de vuelta al técnico del tejado</div>
+            <div class="m"><span class="c on">Hoy</span><span class="c">Tarde-noche</span><span class="c">19:00</span></div>
+          </div>
+          <div class="sect">MÁS TARDE</div>
+          <div class="ncard"><div class="t">Probar la receta de miso</div><div class="m"><span class="c on">Sábado</span><span class="c">Mañana</span></div></div>
+          <div class="ncard"><div class="t">Antibióticos, una cápsula con agua</div><div class="m"><span class="c on">Cada 4 horas</span><span class="c">Próxima 18:00</span></div></div>
+          <div class="ncard"><div class="t">Reservar los neumáticos de invierno</div><div class="m"><span class="c on">En un mes</span><span class="c">Cuando sea</span></div></div>
+          <div class="sect">PASADO</div>
+          <div class="ncard"><div class="t">Regar la higuera</div><div class="m"><span class="c on">Ayer</span><span class="c">Tarde-noche</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 PARTS OF THE DAY ══════════════════════════════════════════════════ -->
+<section class="band light flip" id="how">
+  <div class="wrap">
+    <p class="eyebrow">Momentos del día</p>
+    <h2>La mayoría de las apps<br>te obligan a inventar un minuto.</h2>
+    <p class="lead wide">Todas las demás apps de recordatorios convierten "esta tarde" en las 19:00 antes de aceptarlo. Remsy conserva la respuesta que diste, y dentro de ese momento del día elige el minuto por ti, redondeado a algo más cómodo.</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;gap:1.4rem;align-items:stretch;">
+      <div style="width:6px;border-radius:4px;background:#ccd5dd;flex:none;"></div>
+      <div style="font-size:clamp(1.15rem,3vw,1.7rem);line-height:1.4;font-weight:400;">
+        Recordatorio para <b style="font-weight:800;border-bottom:3px solid currentColor;">hoy</b>, a la <b style="font-weight:800;border-bottom:3px solid currentColor;">tarde-noche</b>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div style="position:relative;">
+        <div class="rail">
+          <div class="w morning">Mañana<span>7 a 12</span></div>
+          <div class="w afternoon">Tarde<span>12 a 18</span></div>
+          <div class="w evening">Tarde-noche<span>18 a 21</span></div>
+          <div class="w night">Noche<span>21 a 24</span></div>
+        </div>
+        <div class="marker" id="mark" style="left:71.8%;"><b id="markLabel">19:00</b></div>
+      </div>
+      <div class="striprow">
+        <button class="btn quiet" id="draw" type="button">Sortear otra vez</button>
+        <p class="note" style="margin:0;">Puedes mover cada franja horaria en Preferencias, y una hora preferida fija el momento a un solo minuto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 EXACT ═════════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap split rev">
+    <div>
+      <div class="panel" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+        <span class="pill dashed">Sorpréndeme</span>
+        <span class="pill solid">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f151b" stroke-width="1.8"/><path d="M12 7v5.2l3.4 2" stroke="#0f151b" stroke-width="1.8" stroke-linecap="round"/></svg>
+          07:15
+        </span>
+        <p class="lead" style="margin:.6rem 0 0;font-size:1rem;">Dos respuestas a la misma pregunta. Ninguna es la alternativa por defecto.</p>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">O indica el minuto</p>
+      <h2>La precisión<br>es un rango.</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">Elige un día y nada más, fija una hora preferida para cada momento del día, limita los fines de semana a una franja más estrecha, o indica el minuto exacto. Un recordatorio puesto a las 7:15 llega a las 7:15, y nada lo redondea.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 REPEAT ════════════════════════════════════════════════════════════ -->
+<section class="band dark flip">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">En repetición</p>
+      <h2>Cada treinta minutos.<br>Cada cuatro horas.<br>Cada año.</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">Un número y una unidad: minutos, horas, semanas, meses o años. Los minutos y las horas funcionan las 24 horas, que es lo que necesita un tratamiento con medicación. Si se te pasa uno, la tarjeta sigue mostrando esa aparición, no la siguiente, hasta que lo atiendes. Cualquier recordatorio se puede configurar para que ignore el modo Concentración, y ninguno lo hace a menos que tú lo pidas. Pausa cualquier repetición hasta la fecha que elijas, y vuelve a empezar por su cuenta sin nada que reparar.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem;">
+        <span class="pill ghost">Cada 30 minutos</span>
+        <span class="pill solid">Cada 4 horas</span>
+        <span class="pill ghost">Cada año</span>
+      </div>
+    </div>
+    <div>
+      <div class="phone tilt">
+        <div class="screen" style="--p-bg:#080D12;--p-card:#111820;--p-bd:#1C2530;--p-ink:#D4D8E0;--p-sub:#708497;--p-tint:rgba(136,152,168,.12);--p-acc:#8898A8;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">1 ahora</span></div>
+          <div class="sect">SIGUIENTE</div>
+          <div class="ncard big ring">
+            <div class="t">Antibióticos, una cápsula con agua</div>
+            <div class="m"><span class="c on">Cada 4 horas</span><span class="c">1.ª a las 09:00</span><span class="c">Próxima 17:00</span></div>
+          </div>
+          <div class="sect">MÁS TARDE</div>
+          <div class="ncard"><div class="t">Regar las plantas</div><div class="m"><span class="c on">Cada 3 días</span><span class="c">Mañana</span></div></div>
+          <div class="ncard"><div class="t">Cumpleaños de mamá</div><div class="m"><span class="c on">Cada año</span><span class="c">14 de marzo</span></div></div>
+          <div class="ncard"><div class="t">Vence el alquiler</div><div class="m"><span class="c on">Cada mes</span><span class="c">En pausa hasta el 3 ago.</span></div></div>
+          <div class="ncard done"><div class="t">Cambiar el filtro de agua</div><div class="m"><span class="c">Completado hoy</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 LATER / WAITING ═══════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">Aplázalo</p>
+    <h2>Más tarde. Y más tarde.<br>Y otra vez más tarde.</h2>
+    <p class="lead wide">Un toque mueve un recordatorio al siguiente momento de tu día, y te dice dónde caerá antes de que lo confirmes. Desliza una tarjeta hacia la izquierda para completarla. Si se te pasa uno por completo, no pasa nada: se queda en la lista, sigue contando arriba de la pantalla, hasta que lo atiendes.</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;align-items:stretch;gap:.9rem;">
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&laquo;</div>
+      <div style="flex:1;border-radius:16px;background:#f6f7f9;padding:1.1rem 1.4rem;">
+        <div style="font-weight:800;font-size:1.35rem;letter-spacing:-.02em;">Más tarde</div>
+        <div style="color:var(--l-body);font-size:.98rem;">Mañana, cae a las 22:00</div>
+      </div>
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&raquo;</div>
+    </div>
+
+    <div class="cards">
+      <div class="panel"><h3>Llega una vez</h3><p>A su hora, y ahí termina. No hay un segundo aviso, ni escalado, ni una insignia roja creciendo en la esquina.</p></div>
+      <div class="panel"><h3>Algún día</h3><p>Sin fecha, pero no quieres perderlo de vista. Remsy sortea un día entre 15 y 90 más adelante, repartidos para que varios guardados juntos no vuelvan todos a la vez.</p></div>
+      <div class="panel"><h3>Comparte cualquier cosa</h3><p>Una receta, un artículo, un enlace. Envíalo a Remsy desde cualquier app y cae en el estante de Algún día sin preguntarte nada.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 PALETTES ══════════════════════════════════════════════════════════ -->
+<section class="band light flip">
+  <div class="wrap split rev">
+    <div>
+      <p class="eyebrow">Hazla tuya</p>
+      <h2>Diecinueve paletas,<br>claras y oscuras.</h2>
+      <p class="lead wide">La misma app, con el color que prefieras. Cada paleta está medida, no elegida a ojo, así que el texto mantiene su contraste en todas ellas. Toca una para probarla.</p>
+
+      <div class="swatches" id="swatches"></div>
+      <p class="swname" id="swname">Porcelana <span>&middot; clara &middot; gratis</span></p>
+    </div>
+    <div>
+      <div class="phone">
+        <div class="screen" id="pscreen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">2 ahora</span></div>
+          <div class="sect">SIGUIENTE</div>
+          <div class="ncard big">
+            <div class="t">Llamar de vuelta al técnico del tejado</div>
+            <div class="m"><span class="c on">Hoy</span><span class="c">Tarde-noche</span><span class="c">19:00</span></div>
+          </div>
+          <div class="sect">MÁS TARDE</div>
+          <div class="ncard"><div class="t">Probar la receta de miso</div><div class="m"><span class="c on">Sábado</span><span class="c">Mañana</span></div></div>
+          <div class="ncard"><div class="t">Reservar los neumáticos de invierno</div><div class="m"><span class="c on">En un mes</span><span class="c">Cuando sea</span></div></div>
+          <div class="ncard"><div class="t">Preguntar por la garantía</div><div class="m"><span class="c on">Algún día</span></div></div>
+          <div class="ncard done"><div class="t">Enviar la lectura del contador</div><div class="m"><span class="c">Completado hoy</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 PRIVACY ═══════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap">
+    <p class="eyebrow">Mantenlo privado</p>
+    <h2>Sin cuenta.<br>Sin servidor propio.</h2>
+    <p class="lead wide">Tus recordatorios viven en tu teléfono y nunca se transmiten. No hay registro, ni analíticas, ni seguimiento. Cada vez que abres la app, le pregunta a RevenueCat si Remsy Plus está activo en tu cuenta de la tienda, llevando un ID anónimo y tu recibo de compra, y nada más.</p>
+
+    <div class="cards">
+      <div class="panel"><h3>Copia</h3><p>Un solo archivo guarda tus recordatorios, tu lista de Listo y tus ajustes, donde tú quieras guardarlo.</p></div>
+      <div class="panel"><h3>Restaurar</h3><p>Desde ese archivo, en el mismo teléfono o en uno nuevo, después de confirmarlo.</p></div>
+      <div class="panel"><h3>Siete idiomas</h3><p>Inglés, alemán, francés, español, portugués, coreano y japonés.</p></div>
+      <div class="panel"><h3>Notificaciones locales</h3><p>Programadas en el propio dispositivo. Sin servicio push, sin token de dispositivo, sin enviar nada a ningún sitio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 08 PLANS ═════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">Remsy Plus</p>
+    <h2>Tres recordatorios gratis.<br>Todo lo demás es Plus.</h2>
+
+    <div class="plans">
+      <div class="panel plan">
+        <h3>Gratis</h3>
+        <div class="price">3 <small>recordatorios a la vez</small></div>
+        <ul>
+          <li>Días, momentos del día y horas exactas</li>
+          <li>El estante Algún día y compartir desde otras apps</li>
+          <li>Las dos paletas predeterminadas, clara y oscura</li>
+          <li>Copias de seguridad y restauración</li>
+        </ul>
+      </div>
+      <div class="panel plan">
+        <h3>Plus</h3>
+        <div class="price">$1.99 <small>al mes, o $9.99 al año</small></div>
+        <ul>
+          <li>Recordatorios ilimitados</li>
+          <li>Repeticiones: cada día, o cada cierto número de minutos, horas, semanas, meses o años</li>
+          <li>Pausa una repetición hasta la fecha que elijas</li>
+          <li>Las diecinueve paletas</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Suscripción de renovación automática. El pago se carga a tu cuenta de Apple y se renueva a menos que la canceles al menos 24 horas antes de que finalice el periodo. Puedes gestionarla o cancelarla en los ajustes de tu cuenta de Apple.</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="brandrow">
+      <img src="../icon.svg" alt="">
+      <span class="n">Remsy</span>
+    </div>
+    <nav>
+      <a href="./privacy/">Política de privacidad</a>
+      <a href="./terms/">Términos del servicio</a>
+      <a href="./support/">Soporte</a>
+      <a href="./impressum/">Aviso legal</a>
+    </nav>
+    <p class="fine">¿Preguntas? <a href="mailto:info@softailed.com">info@softailed.com</a></p>
+    <p class="fine" style="margin-top:.6rem;">&copy; 2026 Fenger Digital GmbH</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── The evening draw ──────────────────────────────────────────────────────
+     Honest to the app's clean-time ladder: it takes the roundest step the
+     window can still offer, and a three-hour evening window can offer whole
+     hours, so those are the only landings a drawn evening produces. */
+  var RAIL_START = 7, RAIL_END = 24;
+  var EVENING = [18, 19, 20];
+  var mark = document.getElementById('mark');
+  var markLabel = document.getElementById('markLabel');
+  var drawBtn = document.getElementById('draw');
+  var last = 19;
+
+  function place(hour) {
+    var pct = ((hour - RAIL_START) / (RAIL_END - RAIL_START)) * 100;
+    mark.style.left = pct.toFixed(2) + '%';
+    markLabel.textContent = (hour < 10 ? '0' : '') + hour + ':00';
+  }
+  if (drawBtn) {
+    drawBtn.addEventListener('click', function () {
+      var next = last;
+      while (next === last) next = EVENING[Math.floor(Math.random() * EVENING.length)];
+      last = next;
+      place(next);
+    });
+  }
+
+  /* ── Palettes ──────────────────────────────────────────────────────────────
+     Values copied from src/palettes.js. `tri` is the icon trio from ICON_TRI,
+     used for the swatch face. Keep this table in step with the app; nothing in
+     the build checks it. */
+  var PALETTES = [
+    ['palesky',   'Medianoche',       1, 0, '#080D12', '#111820', '#1C2530', '#D4D8E0', '#708497', '#8898A8', ['#D6E6F1','#AACADD','#718494']],
+    ['ashteal',   'Niebla Marina',    1, 1, '#0C0E0E', '#141818', '#232828', '#D4D8D8', '#6F8686', '#849EA0', ['#D3E9E9','#A5CFCE','#6C8A8C']],
+    ['plum',      'Belladona',        1, 1, '#181014', '#20141B', '#34232C', '#D0C8CC', '#907D87', '#825B70', ['#E2CFD6','#7D5869','#4D303A']],
+    ['velvet',    'Terciopelo',       1, 1, '#0E0C10', '#151017', '#231726', '#DCD8E0', '#8D7791', '#A793AC', ['#F2E9FA','#E1CBF2','#9E85A3']],
+    ['asholive',  'Liquen',           1, 1, '#0E0E0C', '#181814', '#23261D', '#D4D4CC', '#828372', '#96A07A', ['#E4E6D5','#CDD59D','#879166']],
+    ['orchid',    'Glicinia',         1, 1, '#140914', '#1E0F1E', '#301630', '#D8CEDA', '#8E798C', '#B084AE', ['#ECDDED','#EB9EFF','#B255AD']],
+    ['coolblue',  'Noche del puerto', 1, 1, '#0A1419', '#101F29', '#192F3D', '#D0D6DC', '#6E8EA5', '#4E86A8', ['#CFE2EC','#61AFCE','#3A6B88']],
+    ['ashpink',   'Bruma Rosa',       1, 1, '#0E0C0E', '#171317', '#241C24', '#D8D4D8', '#8B7B8B', '#A880A0', ['#EADCE9','#CEA8D2','#8C6785']],
+    ['ashjade',   'Bruma Jade',       1, 1, '#0C0E0C', '#121612', '#222622', '#D4D8D4', '#6B8675', '#84A08E', ['#DAE9DB','#AFD6B5','#71917B']],
+    ['ashorchid', 'Bruma Orquídea',   1, 1, '#0E0C10', '#18151A', '#27222B', '#D8D4D8', '#897C8F', '#9880A8', ['#E5DEEE','#C1AEE4','#836B94']],
+    ['porcelain', 'Porcelana',        0, 0, '#F2F2F4', '#FFFFFF', '#DFDFE4', '#0E0E10', '#626267', '#98989E', ['#E4E4E9','#98989E','#505057']],
+    ['peony',     'Peonía',           0, 1, '#F5DEF4', '#FCF3FC', '#F3D4F1', '#130913', '#744472', '#D796D2', ['#F3D2F0','#D796D2','#854A82']],
+    ['drift',     'Cielo Suave',      0, 1, '#D2E5F0', '#EBF4FA', '#BAD9EC', '#061016', '#4F5B64', '#79B6D8', ['#C9E0ED','#79B6D8','#436477']],
+    ['chartreuse','Cítrico',          0, 1, '#E6EFB5', '#F4F7E1', '#C9D0A3', '#0D1006', '#3F4430', '#BCCF73', ['#DFE6B5','#BCCF73','#67723D']],
+    ['petal',     'Agua de Rosa',     0, 1, '#EBD8DC', '#FAF0F2', '#EACDD4', '#160B0E', '#605357', '#E8709A', ['#F3C6D6','#E8709A','#803E55']],
+    ['butter',    'Manzanilla',       0, 1, '#F8EDC1', '#FEFCEF', '#E2DEC1', '#100F05', '#4B4330', '#DFD180', ['#EEE9C5','#DFD180','#7B7246']],
+    ['jade',      'Matcha',           0, 1, '#B4D4BD', '#DBEEE0', '#B0C4B5', '#07110A', '#3C443D', '#7DA88A', ['#C9D9CE','#7DA88A','#455D4C']],
+    ['lilac',     'Lila',             0, 1, '#E8DFF5', '#F4F2FD', '#CAC1DB', '#150E20', '#644E8E', '#A88BE8', ['#F1EAFB','#C7AFF2','#8F63DC']],
+    ['sage',      'Pradera',          0, 1, '#D4DDA7', '#EDF2D1', '#C1C7A1', '#0E0F06', '#3E3F35', '#889159', ['#CCCFB8','#889159','#4A5030']]
+  ];
+
+  var host = document.getElementById('swatches');
+  var screen = document.getElementById('pscreen');
+  var nameEl = document.getElementById('swname');
+  if (!host || !screen) return;
+
+  function hexToRgba(hex, a) {
+    var n = parseInt(hex.slice(1), 16);
+    return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+
+  function apply(p) {
+    var dark = p[2], bg = p[4], card = p[5], bd = p[6], ink = p[7], sub = p[8], acc = p[9];
+    screen.style.setProperty('--p-bg', bg);
+    screen.style.setProperty('--p-card', card);
+    screen.style.setProperty('--p-bd', bd);
+    screen.style.setProperty('--p-ink', ink);
+    screen.style.setProperty('--p-sub', sub);
+    screen.style.setProperty('--p-acc', acc);
+    screen.style.setProperty('--p-tint', hexToRgba(ink, dark ? 0.10 : 0.055));
+    nameEl.innerHTML = p[1] + ' <span>&middot; ' + (dark ? 'oscura' : 'clara') + ' &middot; ' + (p[3] ? 'Plus' : 'gratis') + '</span>';
+    /* .sw lives inside a group wrapper now, so query rather than walk children. */
+    Array.prototype.forEach.call(host.querySelectorAll('.sw'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.key === p[0]));
+    });
+  }
+
+  /* Two groups in the app's own order: 10 dark, then 9 light. */
+  [['Oscuras', 1], ['Claras', 0]].forEach(function (g) {
+    var group = document.createElement('div');
+    group.className = 'swgroup';
+    var label = document.createElement('p');
+    label.className = 'swlabel';
+    label.textContent = g[0];
+    var row = document.createElement('div');
+    row.className = 'swrow';
+    PALETTES.filter(function (p) { return p[2] === g[1]; }).forEach(function (p) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'sw';
+      b.dataset.key = p[0];
+      b.style.background = p[4];
+      b.setAttribute('aria-pressed', 'false');
+      b.setAttribute('aria-label', p[1] + ', paleta ' + (p[2] ? 'oscura' : 'clara'));
+      b.innerHTML = '<i style="background:' + p[5] + '"></i><u style="background:' + p[10][1] + '"></u>';
+      b.addEventListener('click', function () { apply(p); });
+      row.appendChild(b);
+    });
+    group.appendChild(label);
+    group.appendChild(row);
+    host.appendChild(group);
+  });
+
+  apply(PALETTES[10]); // Porcelain, the light default
+})();
+</script>
+</body>
+</html>

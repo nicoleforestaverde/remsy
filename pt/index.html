@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<!-- KEPT OUT OF SEARCH ON PURPOSE, until the app is released. Remove this tag on all
+     five pages to let the site be indexed again.
+     NOTE: a robots.txt in this repo would do NOTHING. Crawlers only read robots.txt at the
+     DOMAIN root (nicoleforestaverde.github.io/robots.txt), which belongs to the user site repo,
+     not to /remsy/. For a project page the per-page meta tag is the mechanism that works.
+     This does NOT make the pages unreachable: anyone with the URL still opens them, which is
+     required - the shipped app links privacy, support and impressum from its paywall and
+     Preferences (src/links.js), and App Review has to be able to fetch them. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remsy: Lembretes na Tela de Bloqueio</title>
+<meta name="description" content="O Remsy é um app de lembretes. Defina um período do dia ou um horário exato e receba uma notificação na tela de bloqueio, silenciosa ou com som.">
+<meta property="og:title" content="Remsy: Lembretes na Tela de Bloqueio">
+<meta property="og:description" content="Lembretes na tela de bloqueio, silenciosos ou com som. Defina um período do dia e o Remsy escolhe o minuto, ou diga você mesmo qual horário.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nicoleforestaverde.github.io/remsy/pt/">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ══ 01 HERO ══════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap split">
+    <div>
+      <div class="brandrow" style="margin-bottom:2.6rem;">
+        <img src="../icon.svg" alt="" width="60" height="60" style="width:60px;height:60px;">
+        <div class="n" style="color:#5d6773;font-size:2rem;">Remsy</div>
+      </div>
+
+      <h1>Lembretes na tela de bloqueio,<br>silenciosos ou com som.</h1>
+
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+
+      <p class="lead wide">Defina um dia e um período do dia, e o Remsy escolhe o minuto. Ou diga você mesmo o horário exato. Cada lembrete é silencioso ou com som, você escolhe, e aparece na tela de bloqueio de qualquer forma. Se você perder um, ele espera na lista. Nada fica vermelho.</p>
+
+      <div class="cta">
+        <!-- Swap this for Apple's official "Download on the App Store" badge once the
+             app is live. Apple requires their own artwork, so do not redraw the badge. -->
+        <span class="btn primary">Em breve na App Store</span>
+        <a class="btn quiet" href="#how">Veja como funciona</a>
+      </div>
+      <p class="note">iPhone. Sem conta, sem cadastro. Grátis para até três lembretes.</p>
+    </div>
+
+    <div>
+      <div class="phone">
+        <div class="screen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">2 agora</span></div>
+          <div class="sect">A SEGUIR</div>
+          <div class="ncard big">
+            <div class="t">Ligar de volta para o técnico do telhado</div>
+            <div class="m"><span class="c on">Hoje</span><span class="c">Entardecer</span><span class="c">19h00</span></div>
+          </div>
+          <div class="sect">DEPOIS</div>
+          <div class="ncard"><div class="t">Experimentar a receita de miso</div><div class="m"><span class="c on">Sábado</span><span class="c">Manhã</span></div></div>
+          <div class="ncard"><div class="t">Antibiótico, uma cápsula com água</div><div class="m"><span class="c on">A cada 4 horas</span><span class="c">Próximo 18h00</span></div></div>
+          <div class="ncard"><div class="t">Comprar os pneus de inverno</div><div class="m"><span class="c on">Em um mês</span><span class="c">Qualquer hora</span></div></div>
+          <div class="sect">PASSADO</div>
+          <div class="ncard"><div class="t">Regar a figueira</div><div class="m"><span class="c on">Ontem</span><span class="c">Entardecer</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 PARTS OF THE DAY ══════════════════════════════════════════════════ -->
+<section class="band light flip" id="how">
+  <div class="wrap">
+    <p class="eyebrow">Períodos do dia</p>
+    <h2>A maioria dos apps<br>faz você inventar um horário.</h2>
+    <p class="lead wide">Todo outro app de lembretes transforma "hoje à noite" em 19h00 antes de aceitar. O Remsy guarda a resposta que você deu, escolhe o minuto para você dentro daquele período do dia e arredonda para um horário redondo.</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;gap:1.4rem;align-items:stretch;">
+      <div style="width:6px;border-radius:4px;background:#ccd5dd;flex:none;"></div>
+      <div style="font-size:clamp(1.15rem,3vw,1.7rem);line-height:1.4;font-weight:400;">
+        Definir lembrete para <b style="font-weight:800;border-bottom:3px solid currentColor;">hoje</b>, ao <b style="font-weight:800;border-bottom:3px solid currentColor;">entardecer</b>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div style="position:relative;">
+        <div class="rail">
+          <div class="w morning">Manhã<span>7 às 12</span></div>
+          <div class="w afternoon">Tarde<span>12 às 18</span></div>
+          <div class="w evening">Entardecer<span>18 às 21</span></div>
+          <div class="w night">Noite<span>21 às 24</span></div>
+        </div>
+        <div class="marker" id="mark" style="left:71.8%;"><b id="markLabel">19h00</b></div>
+      </div>
+      <div class="striprow">
+        <button class="btn quiet" id="draw" type="button">Sortear de novo</button>
+        <p class="note" style="margin:0;">Você pode ajustar cada janela em Preferências, e um horário preferido fixa o período em um único minuto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 EXACT ═════════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap split rev">
+    <div>
+      <div class="panel" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+        <span class="pill dashed">Me surpreenda</span>
+        <span class="pill solid">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f151b" stroke-width="1.8"/><path d="M12 7v5.2l3.4 2" stroke="#0f151b" stroke-width="1.8" stroke-linecap="round"/></svg>
+          7h15
+        </span>
+        <p class="lead" style="margin:.6rem 0 0;font-size:1rem;">Duas respostas para a mesma pergunta. Nenhuma delas é reserva.</p>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">Ou diga o minuto</p>
+      <h2>A precisão<br>é uma faixa.</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">Escolha um dia e nada mais, defina um horário preferido para cada período do dia, restrinja os fins de semana a uma janela mais estreita, ou diga o minuto exato. Um lembrete definido para as 7h15 chega às 7h15, e nada arredonda esse horário.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 REPEAT ════════════════════════════════════════════════════════════ -->
+<section class="band dark flip">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Em repetição</p>
+      <h2>A cada trinta minutos.<br>A cada quatro horas.<br>Todo ano.</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">Um número e uma unidade: minutos, horas, semanas, meses ou anos. Minutos e horas rodam o relógio inteiro, o que é exatamente o que um tratamento com remédios precisa. Se você perder um, o cartão continua mostrando aquela ocorrência, não a próxima, até você resolver. Qualquer lembrete pode ser configurado para passar pelo modo Foco, e nenhum passa a menos que você peça. Pause qualquer repetição até uma data que você escolher, e ela volta sozinha, sem nada para consertar.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem;">
+        <span class="pill ghost">A cada 30 minutos</span>
+        <span class="pill solid">A cada 4 horas</span>
+        <span class="pill ghost">Todo ano</span>
+      </div>
+    </div>
+    <div>
+      <div class="phone tilt">
+        <div class="screen" style="--p-bg:#080D12;--p-card:#111820;--p-bd:#1C2530;--p-ink:#D4D8E0;--p-sub:#708497;--p-tint:rgba(136,152,168,.12);--p-acc:#8898A8;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">1 agora</span></div>
+          <div class="sect">A SEGUIR</div>
+          <div class="ncard big ring">
+            <div class="t">Antibiótico, uma cápsula com água</div>
+            <div class="m"><span class="c on">A cada 4 horas</span><span class="c">1º às 9h00</span><span class="c">Próximo 17h00</span></div>
+          </div>
+          <div class="sect">DEPOIS</div>
+          <div class="ncard"><div class="t">Regar as plantas</div><div class="m"><span class="c on">A cada 3 dias</span><span class="c">Manhã</span></div></div>
+          <div class="ncard"><div class="t">Aniversário da mamãe</div><div class="m"><span class="c on">Todo ano</span><span class="c">14 de março</span></div></div>
+          <div class="ncard"><div class="t">O aluguel vence</div><div class="m"><span class="c on">Todo mês</span><span class="c">Pausado até 3 de ago.</span></div></div>
+          <div class="ncard done"><div class="t">Trocar o filtro de água</div><div class="m"><span class="c">Concluído hoje</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 LATER / WAITING ═══════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">Empurre para depois</p>
+    <h2>Depois. E depois.<br>E depois de novo.</h2>
+    <p class="lead wide">Um toque move o lembrete para o próximo período do seu dia, e o app mostra onde ele vai cair antes de você confirmar. Deslize um cartão para a esquerda para concluí-lo. Se você perder um completamente, nada acontece: ele continua na lista, ainda contado no topo da tela, até você resolver.</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;align-items:stretch;gap:.9rem;">
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&laquo;</div>
+      <div style="flex:1;border-radius:16px;background:#f6f7f9;padding:1.1rem 1.4rem;">
+        <div style="font-weight:800;font-size:1.35rem;letter-spacing:-.02em;">Depois</div>
+        <div style="color:var(--l-body);font-size:.98rem;">Amanhã, cai às 22h00</div>
+      </div>
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&raquo;</div>
+    </div>
+
+    <div class="cards">
+      <div class="panel"><h3>Chega uma vez só</h3><p>No horário certo, e depois para. Não tem um segundo aviso, nem escalada, nem um selo vermelho crescendo no canto.</p></div>
+      <div class="panel"><h3>Algum dia</h3><p>Sem data, mas você não quer perder de vista. O Remsy sorteia um dia entre 15 e 90 dias à frente, espaçados para que vários guardados juntos não voltem todos de uma vez.</p></div>
+      <div class="panel"><h3>Compartilhe qualquer coisa</h3><p>Uma receita, um artigo, um link. Envie para o Remsy a partir de qualquer app, e ele cai na prateleira do Algum dia sem perguntar nada.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 PALETTES ══════════════════════════════════════════════════════════ -->
+<section class="band light flip">
+  <div class="wrap split rev">
+    <div>
+      <p class="eyebrow">Do seu jeito</p>
+      <h2>Dezenove paletas,<br>claras e escuras.</h2>
+      <p class="lead wide">O mesmo app, com a cor que você escolher. Cada paleta foi medida, não escolhida no olho, para que o texto mantenha o contraste em todas elas. Toque em uma para testar.</p>
+
+      <div class="swatches" id="swatches"></div>
+      <p class="swname" id="swname">Porcelana <span>&middot; claro &middot; grátis</span></p>
+    </div>
+    <div>
+      <div class="phone">
+        <div class="screen" id="pscreen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">2 agora</span></div>
+          <div class="sect">A SEGUIR</div>
+          <div class="ncard big">
+            <div class="t">Ligar de volta para o técnico do telhado</div>
+            <div class="m"><span class="c on">Hoje</span><span class="c">Entardecer</span><span class="c">19h00</span></div>
+          </div>
+          <div class="sect">DEPOIS</div>
+          <div class="ncard"><div class="t">Experimentar a receita de miso</div><div class="m"><span class="c on">Sábado</span><span class="c">Manhã</span></div></div>
+          <div class="ncard"><div class="t">Comprar os pneus de inverno</div><div class="m"><span class="c on">Em um mês</span><span class="c">Qualquer hora</span></div></div>
+          <div class="ncard"><div class="t">Perguntar sobre a garantia</div><div class="m"><span class="c on">Algum dia</span></div></div>
+          <div class="ncard done"><div class="t">Enviar a leitura do medidor</div><div class="m"><span class="c">Concluído hoje</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 PRIVACY ═══════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap">
+    <p class="eyebrow">Mantenha privado</p>
+    <h2>Sem conta.<br>Sem servidor nosso.</h2>
+    <p class="lead wide">Seus lembretes ficam no seu telefone e nunca são transmitidos. Não há cadastro, não há análise de uso e não há rastreamento. A cada abertura, o app pergunta ao RevenueCat se o Remsy Plus está ativo na sua conta da loja, enviando apenas um ID anônimo e o recibo da loja, e nada mais.</p>
+
+    <div class="cards">
+      <div class="panel"><h3>Backup</h3><p>Um único arquivo guarda seus lembretes, sua lista de concluídos e suas configurações, salvo onde você quiser.</p></div>
+      <div class="panel"><h3>Restaurar</h3><p>A partir desse arquivo, no mesmo telefone ou em um novo, depois que você confirmar.</p></div>
+      <div class="panel"><h3>Sete idiomas</h3><p>Inglês, alemão, francês, espanhol, português, coreano e japonês.</p></div>
+      <div class="panel"><h3>Notificações locais</h3><p>Agendadas no próprio aparelho. Sem serviço de push, sem token do dispositivo, nada é enviado a lugar nenhum.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 08 PLANS ═════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">Remsy Plus</p>
+    <h2>Três lembretes grátis.<br>O resto é Plus.</h2>
+
+    <div class="plans">
+      <div class="panel plan">
+        <h3>Grátis</h3>
+        <div class="price">3 <small>lembretes por vez</small></div>
+        <ul>
+          <li>Dias, períodos do dia e horários exatos</li>
+          <li>Prateleira do Algum dia e compartilhamento</li>
+          <li>As duas paletas padrão, clara e escura</li>
+          <li>Backup e restauração</li>
+        </ul>
+      </div>
+      <div class="panel plan">
+        <h3>Plus</h3>
+        <div class="price">$1.99 <small>por mês, ou $9.99 por ano</small></div>
+        <ul>
+          <li>Lembretes ilimitados</li>
+          <li>Repetições: todo dia, ou a cada tantos minutos, horas, semanas, meses ou anos</li>
+          <li>Pause uma repetição até a data que você escolher</li>
+          <li>Todas as dezenove paletas</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Assinatura com renovação automática. O pagamento é cobrado na sua conta Apple e renova, a menos que seja cancelado pelo menos 24 horas antes do fim do período. Gerencie ou cancele nas configurações da sua conta Apple.</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="brandrow">
+      <img src="../icon.svg" alt="">
+      <span class="n">Remsy</span>
+    </div>
+    <nav>
+      <a href="./privacy/">Política de Privacidade</a>
+      <a href="./terms/">Termos de Serviço</a>
+      <a href="./support/">Suporte</a>
+      <a href="./impressum/">Aviso Legal</a>
+    </nav>
+    <p class="fine">Dúvidas? <a href="mailto:info@softailed.com">info@softailed.com</a></p>
+    <p class="fine" style="margin-top:.6rem;">&copy; 2026 Fenger Digital GmbH</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── The evening draw ──────────────────────────────────────────────────────
+     Honest to the app's clean-time ladder: it takes the roundest step the
+     window can still offer, and a three-hour evening window can offer whole
+     hours, so those are the only landings a drawn evening produces. */
+  var RAIL_START = 7, RAIL_END = 24;
+  var EVENING = [18, 19, 20];
+  var mark = document.getElementById('mark');
+  var markLabel = document.getElementById('markLabel');
+  var drawBtn = document.getElementById('draw');
+  var last = 19;
+
+  function place(hour) {
+    var pct = ((hour - RAIL_START) / (RAIL_END - RAIL_START)) * 100;
+    mark.style.left = pct.toFixed(2) + '%';
+    markLabel.textContent = hour + 'h00';
+  }
+  if (drawBtn) {
+    drawBtn.addEventListener('click', function () {
+      var next = last;
+      while (next === last) next = EVENING[Math.floor(Math.random() * EVENING.length)];
+      last = next;
+      place(next);
+    });
+  }
+
+  /* ── Palettes ──────────────────────────────────────────────────────────────
+     Values copied from src/palettes.js. `tri` is the icon trio from ICON_TRI,
+     used for the swatch face. Keep this table in step with the app; nothing in
+     the build checks it. */
+  var PALETTES = [
+    ['palesky',   'Meia-noite',    1, 0, '#080D12', '#111820', '#1C2530', '#D4D8E0', '#708497', '#8898A8', ['#D6E6F1','#AACADD','#718494']],
+    ['ashteal',   'Névoa do Mar',  1, 1, '#0C0E0E', '#141818', '#232828', '#D4D8D8', '#6F8686', '#849EA0', ['#D3E9E9','#A5CFCE','#6C8A8C']],
+    ['plum',      'Beladona',      1, 1, '#181014', '#20141B', '#34232C', '#D0C8CC', '#907D87', '#825B70', ['#E2CFD6','#7D5869','#4D303A']],
+    ['velvet',    'Veludo',        1, 1, '#0E0C10', '#151017', '#231726', '#DCD8E0', '#8D7791', '#A793AC', ['#F2E9FA','#E1CBF2','#9E85A3']],
+    ['asholive',  'Líquen',        1, 1, '#0E0E0C', '#181814', '#23261D', '#D4D4CC', '#828372', '#96A07A', ['#E4E6D5','#CDD59D','#879166']],
+    ['orchid',    'Glicínia',      1, 1, '#140914', '#1E0F1E', '#301630', '#D8CEDA', '#8E798C', '#B084AE', ['#ECDDED','#EB9EFF','#B255AD']],
+    ['coolblue',  'Noite no porto',1, 1, '#0A1419', '#101F29', '#192F3D', '#D0D6DC', '#6E8EA5', '#4E86A8', ['#CFE2EC','#61AFCE','#3A6B88']],
+    ['ashpink',   'Névoa Rosa',    1, 1, '#0E0C0E', '#171317', '#241C24', '#D8D4D8', '#8B7B8B', '#A880A0', ['#EADCE9','#CEA8D2','#8C6785']],
+    ['ashjade',   'Névoa Jade',    1, 1, '#0C0E0C', '#121612', '#222622', '#D4D8D4', '#6B8675', '#84A08E', ['#DAE9DB','#AFD6B5','#71917B']],
+    ['ashorchid', 'Névoa Orquídea',1, 1, '#0E0C10', '#18151A', '#27222B', '#D8D4D8', '#897C8F', '#9880A8', ['#E5DEEE','#C1AEE4','#836B94']],
+    ['porcelain', 'Porcelana',     0, 0, '#F2F2F4', '#FFFFFF', '#DFDFE4', '#0E0E10', '#626267', '#98989E', ['#E4E4E9','#98989E','#505057']],
+    ['peony',     'Peônia',        0, 1, '#F5DEF4', '#FCF3FC', '#F3D4F1', '#130913', '#744472', '#D796D2', ['#F3D2F0','#D796D2','#854A82']],
+    ['drift',     'Céu Suave',     0, 1, '#D2E5F0', '#EBF4FA', '#BAD9EC', '#061016', '#4F5B64', '#79B6D8', ['#C9E0ED','#79B6D8','#436477']],
+    ['chartreuse','Cítrico',       0, 1, '#E6EFB5', '#F4F7E1', '#C9D0A3', '#0D1006', '#3F4430', '#BCCF73', ['#DFE6B5','#BCCF73','#67723D']],
+    ['petal',     'Água de Rosa',  0, 1, '#EBD8DC', '#FAF0F2', '#EACDD4', '#160B0E', '#605357', '#E8709A', ['#F3C6D6','#E8709A','#803E55']],
+    ['butter',    'Camomila',      0, 1, '#F8EDC1', '#FEFCEF', '#E2DEC1', '#100F05', '#4B4330', '#DFD180', ['#EEE9C5','#DFD180','#7B7246']],
+    ['jade',      'Matcha',        0, 1, '#B4D4BD', '#DBEEE0', '#B0C4B5', '#07110A', '#3C443D', '#7DA88A', ['#C9D9CE','#7DA88A','#455D4C']],
+    ['lilac',     'Lilás',         0, 1, '#E8DFF5', '#F4F2FD', '#CAC1DB', '#150E20', '#644E8E', '#A88BE8', ['#F1EAFB','#C7AFF2','#8F63DC']],
+    ['sage',      'Prado',         0, 1, '#D4DDA7', '#EDF2D1', '#C1C7A1', '#0E0F06', '#3E3F35', '#889159', ['#CCCFB8','#889159','#4A5030']]
+  ];
+
+  var host = document.getElementById('swatches');
+  var screen = document.getElementById('pscreen');
+  var nameEl = document.getElementById('swname');
+  if (!host || !screen) return;
+
+  function hexToRgba(hex, a) {
+    var n = parseInt(hex.slice(1), 16);
+    return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+
+  function apply(p) {
+    var dark = p[2], bg = p[4], card = p[5], bd = p[6], ink = p[7], sub = p[8], acc = p[9];
+    screen.style.setProperty('--p-bg', bg);
+    screen.style.setProperty('--p-card', card);
+    screen.style.setProperty('--p-bd', bd);
+    screen.style.setProperty('--p-ink', ink);
+    screen.style.setProperty('--p-sub', sub);
+    screen.style.setProperty('--p-acc', acc);
+    screen.style.setProperty('--p-tint', hexToRgba(ink, dark ? 0.10 : 0.055));
+    nameEl.innerHTML = p[1] + ' <span>&middot; ' + (dark ? 'escuro' : 'claro') + ' &middot; ' + (p[3] ? 'Plus' : 'grátis') + '</span>';
+    /* .sw lives inside a group wrapper now, so query rather than walk children. */
+    Array.prototype.forEach.call(host.querySelectorAll('.sw'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.key === p[0]));
+    });
+  }
+
+  /* Two groups in the app's own order: 10 dark, then 9 light. */
+  [['Escuro', 1], ['Claro', 0]].forEach(function (g) {
+    var group = document.createElement('div');
+    group.className = 'swgroup';
+    var label = document.createElement('p');
+    label.className = 'swlabel';
+    label.textContent = g[0];
+    var row = document.createElement('div');
+    row.className = 'swrow';
+    PALETTES.filter(function (p) { return p[2] === g[1]; }).forEach(function (p) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'sw';
+      b.dataset.key = p[0];
+      b.style.background = p[4];
+      b.setAttribute('aria-pressed', 'false');
+      b.setAttribute('aria-label', p[1] + ', paleta ' + (p[2] ? 'escura' : 'clara'));
+      b.innerHTML = '<i style="background:' + p[5] + '"></i><u style="background:' + p[10][1] + '"></u>';
+      b.addEventListener('click', function () { apply(p); });
+      row.appendChild(b);
+    });
+    group.appendChild(label);
+    group.appendChild(row);
+    host.appendChild(group);
+  });
+
+  apply(PALETTES[10]); // Porcelain, the light default
+})();
+</script>
+</body>
+</html>

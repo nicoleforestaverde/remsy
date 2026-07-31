@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- KEPT OUT OF SEARCH ON PURPOSE, until the app is released. Remove this tag on all
+     five pages to let the site be indexed again.
+     NOTE: a robots.txt in this repo would do NOTHING. Crawlers only read robots.txt at the
+     DOMAIN root (nicoleforestaverde.github.io/robots.txt), which belongs to the user site repo,
+     not to /remsy/. For a project page the per-page meta tag is the mechanism that works.
+     This does NOT make the pages unreachable: anyone with the URL still opens them, which is
+     required - the shipped app links privacy, support and impressum from its paywall and
+     Preferences (src/links.js), and App Review has to be able to fetch them. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remsy: 잠금화면 알림</title>
+<meta name="description" content="Remsy는 리마인더 앱이에요. 시간대나 정확한 시각을 정하면 무음으로도 소리로도 잠금화면에 알림이 와요.">
+<meta property="og:title" content="Remsy: 잠금화면 알림">
+<meta property="og:description" content="잠금화면 알림, 무음으로도 소리로도. 시간대를 정하면 Remsy가 알아서 분까지 골라줘요. 아니면 직접 정확한 시각을 정해도 돼요.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nicoleforestaverde.github.io/remsy/ko/">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ══ 01 HERO ══════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap split">
+    <div>
+      <div class="brandrow" style="margin-bottom:2.6rem;">
+        <img src="../icon.svg" alt="" width="60" height="60" style="width:60px;height:60px;">
+        <div class="n" style="color:#5d6773;font-size:2rem;">Remsy</div>
+      </div>
+
+      <h1>잠금화면 알림,<br>무음으로도 소리로도.</h1>
+
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+
+      <p class="lead wide">날짜와 시간대를 정하면 Remsy가 몇 분인지 알아서 골라줘요. 아니면 직접 정확한 시각을 정해도 돼요. 넛지마다 무음이나 소리 중 원하는 대로 정할 수 있고, 어느 쪽이든 잠금화면에 떠요. 놓쳐도 목록에 그대로 남아서 기다려요. 빨갛게 표시되는 일은 없어요.</p>
+
+      <div class="cta">
+        <!-- Swap this for Apple's official "Download on the App Store" badge once the
+             app is live. Apple requires their own artwork, so do not redraw the badge. -->
+        <span class="btn primary">앱 스토어 출시 예정</span>
+        <a class="btn quiet" href="#how">어떻게 작동하는지 보기</a>
+      </div>
+      <p class="note">iPhone 전용. 계정도, 가입도 필요 없어요. 넛지 3개까지 무료예요.</p>
+    </div>
+
+    <div>
+      <div class="phone">
+        <div class="screen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">지금 2</span></div>
+          <div class="sect">다음</div>
+          <div class="ncard big">
+            <div class="t">지붕 수리 기사님께 다시 전화하기</div>
+            <div class="m"><span class="c on">오늘</span><span class="c">저녁</span><span class="c">오후 7:00</span></div>
+          </div>
+          <div class="sect">나중에</div>
+          <div class="ncard"><div class="t">미소 된장 레시피 도전하기</div><div class="m"><span class="c on">토요일</span><span class="c">아침</span></div></div>
+          <div class="ncard"><div class="t">항생제 한 알, 물과 함께 복용</div><div class="m"><span class="c on">4시간마다</span><span class="c">다음 오후 6:00</span></div></div>
+          <div class="ncard"><div class="t">겨울 타이어 예약하기</div><div class="m"><span class="c on">한 달 뒤</span><span class="c">언제든지</span></div></div>
+          <div class="sect">지난 항목</div>
+          <div class="ncard"><div class="t">무화과나무에 물 주기</div><div class="m"><span class="c on">어제</span><span class="c">저녁</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 PARTS OF THE DAY ══════════════════════════════════════════════════ -->
+<section class="band light flip" id="how">
+  <div class="wrap">
+    <p class="eyebrow">하루의 시간대</p>
+    <h2>대부분의 앱은<br>분까지 직접 정하게 만들어요.</h2>
+    <p class="lead wide">다른 리마인더 앱들은 "저녁에"라는 말을 19시로 바꿔야만 받아줘요. Remsy는 답한 그대로를 기억해두고, 그 시간대 안에서 알아서 분을 골라 깔끔한 숫자로 반올림해요.</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;gap:1.4rem;align-items:stretch;">
+      <div style="width:6px;border-radius:4px;background:#ccd5dd;flex:none;"></div>
+      <div style="font-size:clamp(1.15rem,3vw,1.7rem);line-height:1.4;font-weight:400;">
+        <b style="font-weight:800;border-bottom:3px solid currentColor;">오늘</b>, <b style="font-weight:800;border-bottom:3px solid currentColor;">저녁</b>에 넛지 예약
+      </div>
+    </div>
+
+    <div class="strip">
+      <div style="position:relative;">
+        <div class="rail">
+          <div class="w morning">아침<span>7~12시</span></div>
+          <div class="w afternoon">오후<span>12~18시</span></div>
+          <div class="w evening">저녁<span>18~21시</span></div>
+          <div class="w night">밤<span>21~24시</span></div>
+        </div>
+        <div class="marker" id="mark" style="left:71.8%;"><b id="markLabel">오후 7:00</b></div>
+      </div>
+      <div class="striprow">
+        <button class="btn quiet" id="draw" type="button">다시 섞기</button>
+        <p class="note" style="margin:0;">모든 시간대는 설정에서 자유롭게 바꿀 수 있어요. 원하는 시각을 정해두면 그 시간대는 그 분으로 고정돼요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 EXACT ═════════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap split rev">
+    <div>
+      <div class="panel" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+        <span class="pill dashed">랜덤으로</span>
+        <span class="pill solid">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f151b" stroke-width="1.8"/><path d="M12 7v5.2l3.4 2" stroke="#0f151b" stroke-width="1.8" stroke-linecap="round"/></svg>
+          오전 7:15
+        </span>
+        <p class="lead" style="margin:.6rem 0 0;font-size:1rem;">같은 질문에 대한 두 가지 답. 어느 쪽도 차선책이 아니에요.</p>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">아니면 분까지 직접</p>
+      <h2>정밀함에도<br>폭이 있어요.</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">날짜만 정하고 나머지는 맡기거나, 시간대마다 원하는 시각을 정하거나, 주말은 더 좁은 범위로 묶거나, 아니면 정확한 분까지 직접 말해도 돼요. 7시 15분으로 정한 넛지는 7시 15분에 와요. 반올림되는 일은 없어요.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 REPEAT ════════════════════════════════════════════════════════════ -->
+<section class="band dark flip">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">반복</p>
+      <h2>30분마다.<br>4시간마다.<br>매년.</h2>
+      <div class="squiggle" aria-hidden="true">
+        <svg viewBox="0 0 396 14" fill="none" preserveAspectRatio="none"><path d="M0 7 Q9 1.5 18 7 T36 7 T54 7 T72 7 T90 7 T108 7 T126 7 T144 7 T162 7 T180 7 T198 7 T216 7 T234 7 T252 7 T270 7 T288 7 T306 7 T324 7 T342 7 T360 7 T378 7 T396 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </div>
+      <p class="lead wide">숫자와 단위로 정해요. 분, 시간, 주, 달, 년 중에서요. 분과 시간 단위는 하루 종일 돌아가서, 복용 일정에 딱 맞아요. 한 번 놓치면 다음 차례가 아니라 놓친 그 차례를 그대로 보여주고, 처리할 때까지 기다려요. 어떤 넛지든 집중 모드를 뚫고 오게 설정할 수 있고, 직접 켜지 않는 한 그런 일은 없어요. 반복은 원하는 날짜까지 일시중지할 수 있고, 손댈 것 없이 그 날짜에 저절로 다시 시작해요.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem;">
+        <span class="pill ghost">30분마다</span>
+        <span class="pill solid">4시간마다</span>
+        <span class="pill ghost">매년</span>
+      </div>
+    </div>
+    <div>
+      <div class="phone tilt">
+        <div class="screen" style="--p-bg:#080D12;--p-card:#111820;--p-bd:#1C2530;--p-ink:#D4D8E0;--p-sub:#708497;--p-tint:rgba(136,152,168,.12);--p-acc:#8898A8;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">지금 1</span></div>
+          <div class="sect">다음</div>
+          <div class="ncard big ring">
+            <div class="t">항생제 한 알, 물과 함께 복용</div>
+            <div class="m"><span class="c on">4시간마다</span><span class="c">1회 오전 9:00</span><span class="c">다음 오후 5:00</span></div>
+          </div>
+          <div class="sect">나중에</div>
+          <div class="ncard"><div class="t">화분에 물 주기</div><div class="m"><span class="c on">3일마다</span><span class="c">아침</span></div></div>
+          <div class="ncard"><div class="t">엄마 생신</div><div class="m"><span class="c on">매년</span><span class="c">3월 14일</span></div></div>
+          <div class="ncard"><div class="t">월세 납부일</div><div class="m"><span class="c on">매달</span><span class="c">8월 3일까지 일시중지</span></div></div>
+          <div class="ncard done"><div class="t">정수 필터 교체하기</div><div class="m"><span class="c">오늘 완료</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 LATER / WAITING ═══════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">다음으로 넘기기</p>
+    <h2>나중에. 또 나중에.<br>그리고 또 나중에.</h2>
+    <p class="lead wide">한 번 탭하면 넛지가 하루의 다음 시간대로 넘어가요. 옮기기 전에 어디로 가는지 먼저 보여줘요. 카드를 왼쪽으로 스와이프하면 완료돼요. 완전히 놓쳐도 아무 일도 안 일어나요. 목록에 그대로 남아서 화면 위쪽 숫자에도 계속 잡혀요, 처리할 때까지요.</p>
+
+    <div class="panel" style="margin-top:3rem;display:flex;align-items:stretch;gap:.9rem;">
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&laquo;</div>
+      <div style="flex:1;border-radius:16px;background:#f6f7f9;padding:1.1rem 1.4rem;">
+        <div style="font-weight:800;font-size:1.35rem;letter-spacing:-.02em;">나중에</div>
+        <div style="color:var(--l-body);font-size:.98rem;">내일, 오후 10:00 도착</div>
+      </div>
+      <div style="width:56px;border-radius:16px;background:#f0f2f4;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:600;color:#5f6a76;flex:none;">&raquo;</div>
+    </div>
+
+    <div class="cards">
+      <div class="panel"><h3>한 번만 와요</h3><p>정한 시각에 딱 한 번요. 그다음엔 조용해져요. 두 번째 알림도, 점점 심해지는 재촉도, 구석에서 커지는 빨간 배지도 없어요.</p></div>
+      <div class="panel"><h3>언젠가</h3><p>날짜는 없지만 잊고 싶지 않은 일들을 위한 곳이에요. Remsy가 15일에서 90일 사이에서 하루를 무작위로 골라줘요. 한꺼번에 넣어둔 것들도 흩어져서 돌아오니까 몰리지 않아요.</p></div>
+      <div class="panel"><h3>무엇이든 공유해서 담기</h3><p>레시피, 기사, 링크 뭐든지요. 어떤 앱에서든 Remsy로 보내면 아무것도 묻지 않고 바로 언젠가 목록에 담겨요.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 PALETTES ══════════════════════════════════════════════════════════ -->
+<section class="band light flip">
+  <div class="wrap split rev">
+    <div>
+      <p class="eyebrow">나만의 스타일로</p>
+      <h2>열아홉 가지 팔레트,<br>라이트와 다크.</h2>
+      <p class="lead wide">같은 앱, 색상은 내 마음대로. 하나하나 눈대중이 아니라 실제로 측정해서 만들었기 때문에 어떤 팔레트에서도 글자가 또렷하게 보여요. 하나를 눌러서 바로 확인해보세요.</p>
+
+      <div class="swatches" id="swatches"></div>
+      <p class="swname" id="swname">포슬린 <span>&middot; 라이트 &middot; 무료</span></p>
+    </div>
+    <div>
+      <div class="phone">
+        <div class="screen" id="pscreen" style="--p-bg:#F2F2F4;--p-card:#FFFFFF;--p-bd:#DFDFE4;--p-ink:#0E0E10;--p-sub:#626267;--p-tint:rgba(14,14,16,.055);--p-acc:#98989E;">
+          <div class="statusbar"><span>9:41</span><div class="notch"></div><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+          <div class="appbar"><span class="wordmark">Remsy</span><span class="nowbadge">지금 2</span></div>
+          <div class="sect">다음</div>
+          <div class="ncard big">
+            <div class="t">지붕 수리 기사님께 다시 전화하기</div>
+            <div class="m"><span class="c on">오늘</span><span class="c">저녁</span><span class="c">오후 7:00</span></div>
+          </div>
+          <div class="sect">나중에</div>
+          <div class="ncard"><div class="t">미소 된장 레시피 도전하기</div><div class="m"><span class="c on">토요일</span><span class="c">아침</span></div></div>
+          <div class="ncard"><div class="t">겨울 타이어 예약하기</div><div class="m"><span class="c on">한 달 뒤</span><span class="c">언제든지</span></div></div>
+          <div class="ncard"><div class="t">보증 기간 문의하기</div><div class="m"><span class="c on">언젠가</span></div></div>
+          <div class="ncard done"><div class="t">계량기 검침 값 보내기</div><div class="m"><span class="c">오늘 완료</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 PRIVACY ═══════════════════════════════════════════════════════════ -->
+<section class="band dark">
+  <div class="wrap">
+    <p class="eyebrow">비공개 유지</p>
+    <h2>계정 없이.<br>서버도 없이.</h2>
+    <p class="lead wide">넛지는 휴대폰 안에만 있고, 어디로도 전송되지 않아요. 가입도, 분석 도구도, 추적도 없어요. 앱을 열 때마다 RevenueCat에 Remsy Plus 구독이 활성화되어 있는지만 물어보는데, 이때 익명 ID와 스토어 영수증만 전달돼요. 그 외에는 아무것도 보내지 않아요.</p>
+
+    <div class="cards">
+      <div class="panel"><h3>백업</h3><p>넛지, 완료 목록, 설정을 파일 하나에 담아서 원하는 곳에 보관해요.</p></div>
+      <div class="panel"><h3>복원</h3><p>그 파일에서 다시 불러와요. 같은 휴대폰이든 새 휴대폰이든, 확인만 하면 돼요.</p></div>
+      <div class="panel"><h3>7개 언어</h3><p>영어, 독일어, 프랑스어, 스페인어, 포르투갈어, 한국어, 일본어.</p></div>
+      <div class="panel"><h3>기기 안에서 처리하는 알림</h3><p>알림은 기기에서 직접 예약돼요. 푸시 서버도, 기기 토큰도 없고, 어디로도 전송되지 않아요.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 08 PLANS ═════════════════════════════════════════════════════════════ -->
+<section class="band light">
+  <div class="wrap">
+    <p class="eyebrow">Remsy Plus</p>
+    <h2>넛지 3개는 무료.<br>나머지는 전부 Plus예요.</h2>
+
+    <div class="plans">
+      <div class="panel plan">
+        <h3>무료</h3>
+        <div class="price">3<small>개까지 동시에</small></div>
+        <ul>
+          <li>날짜, 시간대, 정확한 시각</li>
+          <li>언젠가 목록과 공유로 담기</li>
+          <li>기본 팔레트 2종, 라이트와 다크</li>
+          <li>백업과 복원</li>
+        </ul>
+      </div>
+      <div class="panel plan">
+        <h3>Plus</h3>
+        <div class="price">$1.99<small>/월, 또는 $9.99/년</small></div>
+        <ul>
+          <li>무제한 넛지</li>
+          <li>반복: 매일, 또는 분·시간·주·달·년 단위로 원하는 만큼</li>
+          <li>반복은 원하는 날짜까지 일시중지</li>
+          <li>열아홉 가지 팔레트 전부</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">자동 갱신 구독이에요. 결제는 Apple 계정으로 청구되고, 구독 기간이 끝나기 24시간 전까지 해지하지 않으면 자동으로 갱신돼요. Apple 계정 설정에서 언제든 관리하거나 해지할 수 있어요.</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="brandrow">
+      <img src="../icon.svg" alt="">
+      <span class="n">Remsy</span>
+    </div>
+    <nav>
+      <a href="./privacy/">개인정보 처리방침</a>
+      <a href="./terms/">이용약관</a>
+      <a href="./support/">지원</a>
+      <a href="./impressum/">법적 고지</a>
+    </nav>
+    <p class="fine">궁금한 점이 있나요? <a href="mailto:info@softailed.com">info@softailed.com</a></p>
+    <p class="fine" style="margin-top:.6rem;">&copy; 2026 Fenger Digital GmbH</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── The evening draw ──────────────────────────────────────────────────────
+     Honest to the app's clean-time ladder: it takes the roundest step the
+     window can still offer, and a three-hour evening window can offer whole
+     hours, so those are the only landings a drawn evening produces. */
+  var RAIL_START = 7, RAIL_END = 24;
+  var EVENING = [18, 19, 20];
+  var mark = document.getElementById('mark');
+  var markLabel = document.getElementById('markLabel');
+  var drawBtn = document.getElementById('draw');
+  var last = 19;
+
+  function place(hour) {
+    var pct = ((hour - RAIL_START) / (RAIL_END - RAIL_START)) * 100;
+    mark.style.left = pct.toFixed(2) + '%';
+    markLabel.textContent = (hour >= 12 ? '오후 ' : '오전 ') + (hour > 12 ? hour - 12 : hour) + ':00';
+  }
+  if (drawBtn) {
+    drawBtn.addEventListener('click', function () {
+      var next = last;
+      while (next === last) next = EVENING[Math.floor(Math.random() * EVENING.length)];
+      last = next;
+      place(next);
+    });
+  }
+
+  /* ── Palettes ──────────────────────────────────────────────────────────────
+     Values copied from src/palettes.js. `tri` is the icon trio from ICON_TRI,
+     used for the swatch face. Keep this table in step with the app; nothing in
+     the build checks it. */
+  var PALETTES = [
+    ['palesky',   '자정',        1, 0, '#080D12', '#111820', '#1C2530', '#D4D8E0', '#708497', '#8898A8', ['#D6E6F1','#AACADD','#718494']],
+    ['ashteal',   '바다 안개',    1, 1, '#0C0E0E', '#141818', '#232828', '#D4D8D8', '#6F8686', '#849EA0', ['#D3E9E9','#A5CFCE','#6C8A8C']],
+    ['plum',      '나이트쉐이드', 1, 1, '#181014', '#20141B', '#34232C', '#D0C8CC', '#907D87', '#825B70', ['#E2CFD6','#7D5869','#4D303A']],
+    ['velvet',    '벨벳',        1, 1, '#0E0C10', '#151017', '#231726', '#DCD8E0', '#8D7791', '#A793AC', ['#F2E9FA','#E1CBF2','#9E85A3']],
+    ['asholive',  '이끼 숲',      1, 1, '#0E0E0C', '#181814', '#23261D', '#D4D4CC', '#828372', '#96A07A', ['#E4E6D5','#CDD59D','#879166']],
+    ['orchid',    '등나무',      1, 1, '#140914', '#1E0F1E', '#301630', '#D8CEDA', '#8E798C', '#B084AE', ['#ECDDED','#EB9EFF','#B255AD']],
+    ['coolblue',  '하버 나이트',  1, 1, '#0A1419', '#101F29', '#192F3D', '#D0D6DC', '#6E8EA5', '#4E86A8', ['#CFE2EC','#61AFCE','#3A6B88']],
+    ['ashpink',   '블러쉬 헤이즈', 1, 1, '#0E0C0E', '#171317', '#241C24', '#D8D4D8', '#8B7B8B', '#A880A0', ['#EADCE9','#CEA8D2','#8C6785']],
+    ['ashjade',   '제이드 헤이즈', 1, 1, '#0C0E0C', '#121612', '#222622', '#D4D8D4', '#6B8675', '#84A08E', ['#DAE9DB','#AFD6B5','#71917B']],
+    ['ashorchid', '오키드 헤이즈', 1, 1, '#0E0C10', '#18151A', '#27222B', '#D8D4D8', '#897C8F', '#9880A8', ['#E5DEEE','#C1AEE4','#836B94']],
+    ['porcelain', '포슬린',      0, 0, '#F2F2F4', '#FFFFFF', '#DFDFE4', '#0E0E10', '#626267', '#98989E', ['#E4E4E9','#98989E','#505057']],
+    ['peony',     '피오니',      0, 1, '#F5DEF4', '#FCF3FC', '#F3D4F1', '#130913', '#744472', '#D796D2', ['#F3D2F0','#D796D2','#854A82']],
+    ['drift',     '소프트 스카이', 0, 1, '#D2E5F0', '#EBF4FA', '#BAD9EC', '#061016', '#4F5B64', '#79B6D8', ['#C9E0ED','#79B6D8','#436477']],
+    ['chartreuse','시트러스',    0, 1, '#E6EFB5', '#F4F7E1', '#C9D0A3', '#0D1006', '#3F4430', '#BCCF73', ['#DFE6B5','#BCCF73','#67723D']],
+    ['petal',     '로즈워터',    0, 1, '#EBD8DC', '#FAF0F2', '#EACDD4', '#160B0E', '#605357', '#E8709A', ['#F3C6D6','#E8709A','#803E55']],
+    ['butter',    '카모마일',    0, 1, '#F8EDC1', '#FEFCEF', '#E2DEC1', '#100F05', '#4B4330', '#DFD180', ['#EEE9C5','#DFD180','#7B7246']],
+    ['jade',      '말차',        0, 1, '#B4D4BD', '#DBEEE0', '#B0C4B5', '#07110A', '#3C443D', '#7DA88A', ['#C9D9CE','#7DA88A','#455D4C']],
+    ['lilac',     '라일락',      0, 1, '#E8DFF5', '#F4F2FD', '#CAC1DB', '#150E20', '#644E8E', '#A88BE8', ['#F1EAFB','#C7AFF2','#8F63DC']],
+    ['sage',      '초원',        0, 1, '#D4DDA7', '#EDF2D1', '#C1C7A1', '#0E0F06', '#3E3F35', '#889159', ['#CCCFB8','#889159','#4A5030']]
+  ];
+
+  var host = document.getElementById('swatches');
+  var screen = document.getElementById('pscreen');
+  var nameEl = document.getElementById('swname');
+  if (!host || !screen) return;
+
+  function hexToRgba(hex, a) {
+    var n = parseInt(hex.slice(1), 16);
+    return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+
+  function apply(p) {
+    var dark = p[2], bg = p[4], card = p[5], bd = p[6], ink = p[7], sub = p[8], acc = p[9];
+    screen.style.setProperty('--p-bg', bg);
+    screen.style.setProperty('--p-card', card);
+    screen.style.setProperty('--p-bd', bd);
+    screen.style.setProperty('--p-ink', ink);
+    screen.style.setProperty('--p-sub', sub);
+    screen.style.setProperty('--p-acc', acc);
+    screen.style.setProperty('--p-tint', hexToRgba(ink, dark ? 0.10 : 0.055));
+    nameEl.innerHTML = p[1] + ' <span>&middot; ' + (dark ? '다크' : '라이트') + ' &middot; ' + (p[3] ? 'Plus' : '무료') + '</span>';
+    /* .sw lives inside a group wrapper now, so query rather than walk children. */
+    Array.prototype.forEach.call(host.querySelectorAll('.sw'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.key === p[0]));
+    });
+  }
+
+  /* Two groups in the app's own order: 10 dark, then 9 light. */
+  [['다크', 1], ['라이트', 0]].forEach(function (g) {
+    var group = document.createElement('div');
+    group.className = 'swgroup';
+    var label = document.createElement('p');
+    label.className = 'swlabel';
+    label.textContent = g[0];
+    var row = document.createElement('div');
+    row.className = 'swrow';
+    PALETTES.filter(function (p) { return p[2] === g[1]; }).forEach(function (p) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'sw';
+      b.dataset.key = p[0];
+      b.style.background = p[4];
+      b.setAttribute('aria-pressed', 'false');
+      b.setAttribute('aria-label', (p[2] ? '다크' : '라이트') + ' 팔레트, ' + p[1]);
+      b.innerHTML = '<i style="background:' + p[5] + '"></i><u style="background:' + p[10][1] + '"></u>';
+      b.addEventListener('click', function () { apply(p); });
+      row.appendChild(b);
+    });
+    group.appendChild(label);
+    group.appendChild(row);
+    host.appendChild(group);
+  });
+
+  apply(PALETTES[10]); // Porcelain, the light default
+})();
+</script>
+</body>
+</html>
